@@ -1,5 +1,11 @@
-tabs = document.querySelectorAll('.preview-tabs-header-items-item');
-tabsContent = document.querySelectorAll('.preview-tabs-content');
+import { dataTabsTop, dataTabsBot, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot } from "./data.js";
+import card from "./card.js"
+// import data from "./data.json" with { type: "json" };
+
+console.log(dataTabsBot);
+
+const tabs = document.querySelectorAll('.preview-tabs-header-items-item');
+const tabsContent = document.querySelectorAll('.preview-tabs-content');
 tabs.forEach((element, index) => {
     element.addEventListener('click', () => {
         tabs.forEach(i => {
@@ -9,119 +15,17 @@ tabs.forEach((element, index) => {
         tabsContent.forEach((item, i) => {
             if (i !== index) {
                 item.classList.add('hidden');
+                item.classList.remove('anim');
             }
             else {
                 item.classList.remove('hidden');
+                item.classList.add('anim');
             }
         })
     })
 });
 
-const dataTabsTop = [
-    {
-        title: "Звёздные войны: Скайуокер. Восход",
-        subtitle: "Фантастика, фэнтези, боевик, приключения",
-        imageUrl: "images/png/starWars.png",
-        rating: "6.70"
-    },
-    {
-        title: "Побег из Претории",
-        subtitle: "Триллер",
-        imageUrl: "images/png/run.png",
-        rating: "6.70"
-    },
-    {
-        title: "Джокер",
-        subtitle: "Триллер, драма, криминал",
-        imageUrl: "images/png/joker.png",
-        rating: "8.50"
-    },
-    {
-        title: "Джентльмены",
-        subtitle: "Боевик, комедия, криминал",
-        imageUrl: "images/png/gentelmen.png",
-        rating: "8.00"
-    }
-]
-const dataTabsBot = [
-    {
-        title: "Ford против Ferrari",
-        subtitle: "Биография, спорт, драма, боевик",
-        imageUrl: "images/png/ford&ferrary.png",
-        rating: "8.10"
-    },
-    {
-        title: "3022",
-        subtitle: "Фантастика, триллер",
-        imageUrl: "images/png/future.png",
-        rating: "4.90"
-    },
-    {
-        title: "Хищные птицы: Потрясающая история Харли Квинн",
-        subtitle: "Боевик, криминал, комедия",
-        imageUrl: "images/png/birds.png",
-        rating: "6.20"
-    },
-    {
-        title: "Плохие парни навсегда",
-        subtitle: "Боевик, комедия, криминал",
-        imageUrl: "images/png/boys.png",
-        rating: "6.90"
-    }
-]
 
-const thirdDataTabsTop = [
-    {
-        title: "Побег из Претории",
-        subtitle: "Триллер",
-        imageUrl: "images/png/run.png",
-        rating: "6.70"
-    },
-    {
-        title: "Джокер",
-        subtitle: "Триллер, драма, криминал",
-        imageUrl: "images/png/joker.png",
-        rating: "8.50"
-    },
-    {
-        title: "Звёздные войны: Скайуокер. Восход",
-        subtitle: "Фантастика, фэнтези, боевик, приключения",
-        imageUrl: "images/png/starWars.png",
-        rating: "6.70"
-    },
-    {
-        title: "Джентльмены",
-        subtitle: "Боевик, комедия, криминал",
-        imageUrl: "images/png/gentelmen.png",
-        rating: "8.00"
-    }
-]
-const thirdDataTabsBot = [
-    {
-        title: "Ford против Ferrari",
-        subtitle: "Биография, спорт, драма, боевик",
-        imageUrl: "images/png/ford&ferrary.png",
-        rating: "8.10"
-    },
-    {
-        title: "3022",
-        subtitle: "Фантастика, триллер",
-        imageUrl: "images/png/future.png",
-        rating: "4.90"
-    },
-    {
-        title: "Хищные птицы: Потрясающая история Харли Квинн",
-        subtitle: "Боевик, криминал, комедия",
-        imageUrl: "images/png/birds.png",
-        rating: "6.20"
-    },
-    {
-        title: "Плохие парни навсегда",
-        subtitle: "Боевик, комедия, криминал",
-        imageUrl: "images/png/boys.png",
-        rating: "6.90"
-    }
-]
 
 function tabsRating(rate) {
     switch (true) {
@@ -141,24 +45,38 @@ function tabsRating(rate) {
 function createMovieCard(movie) {
     const cardRate = tabsRating(movie.rating);
     return `
-        <div class="preview-tabs-content-card">
+        <a href="${movie.href}" class="preview-tabs-content-card">
             <span class="preview-tabs-content-card-rating" style="background:${cardRate}">${movie.rating}</span>
-            <img src="${movie.imageUrl}" class="preview-tabs-content-card-image">
+            <div class="preview-tabs-content-card-img" style="background:url(${movie.imageUrl})">
+                <button class="preview-tabs-content-card-img-btn">
+                    Посмотреть
+                </button>
+                <div class="preview-tabs-content-card-img-bg"></div>
+            </div>
+            
             <p class="preview-tabs-content-card-title">${movie.title}</p>
             <p class="preview-tabs-content-card-subtitle">${movie.subtitle}</p>
-        </div>
+        </a>
     `;
 }
 
 function renderMovies(containerId, cardData) {
-    const container = document.getElementById(containerId);
+    // const container = document.getElementById(containerId);
+    const container = document.querySelectorAll(`#${containerId}`);
     let cardsHTML = '';
     
     cardData.forEach(card => {
         cardsHTML += createMovieCard(card);
     });
+    if (container.length === 1) {
+        container[0].innerHTML = cardsHTML;
+    }
+    else {
+        container.forEach(element => {
+            element.innerHTML = cardsHTML;
+        })
+    }
     
-    container.innerHTML = cardsHTML;
 }
 
 // Рендерим карточки при загрузке страницы
@@ -169,4 +87,107 @@ document.addEventListener('DOMContentLoaded', function() {
     renderMovies('second-tabs-bot', dataTabsTop);
     renderMovies('third-tabs-top', thirdDataTabsTop);
     renderMovies('third-tabs-bot', thirdDataTabsBot);
+    renderMovies('pop-item-1', popularFirstDataTabsBot);
+    renderMovies('pop-item-2', popularFirstDataTabsBot);
 });
+
+// counter of likes & dislikes
+const likeButton = document.querySelector('#like');
+const dislikeButton = document.querySelector('#dislike');
+
+
+const like = document.querySelector('#like span');
+const dislike = document.querySelector('#dislike span');
+let counterLike = 0;
+let counterDislike = 0;
+
+
+likeButton.addEventListener('click', () => {
+    counterLike++;
+    like.textContent = counterLike;
+});
+
+dislikeButton.addEventListener('click', () => {
+    counterDislike++;
+    dislike.textContent = counterDislike;
+});
+
+// cards
+
+const cardCont = document.querySelector('#card-cont');
+
+cardContent.forEach(element => {
+    cardCont.innerHTML += card(element.text, element.img);
+})
+
+
+const popTabs = document.querySelectorAll('#popular-tab');
+const popTabsContent = document.querySelectorAll('.preview-tabs-content');
+popTabs.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        popTabs.forEach(i => {
+            i.classList.remove('active');
+        })
+        element.classList.add('active');
+        // tabsContent.forEach((item, i) => {
+        //     if (i !== index) {
+        //         item.classList.add('hidden');
+        //     }
+        //     else {
+        //         item.classList.remove('hidden');
+        //     }
+        // })
+    })
+});
+
+const prevBtn = document.querySelector('.swiper-prev-btn');
+const nextBtn = document.querySelector('.swiper-next-btn');
+const contentSlider = document.querySelector('.swiper');
+const sliderItem = document.querySelectorAll('.swiper-item');
+let currentSlideIndex = 0; // Tracks the currently active slide
+const totalSlides = sliderItem.length;
+
+
+function renderCounter(count) {
+    if (currentSlideIndex < 0) {
+        count = totalSlides;
+    } else if (currentSlideIndex >= totalSlides) {
+        document.querySelector('.swiper-counter span').textContent = 1;
+    } else {
+        document.querySelector('.swiper-counter span').textContent = currentSlideIndex + 1;
+    }
+    
+}
+function goToSlide(index) {
+    // Ensure the index loops around (infinite loop)
+    if (index < 0) {
+        currentSlideIndex = totalSlides - 1;
+    } else if (index >= totalSlides) {
+        currentSlideIndex = 0;
+    } else {
+        currentSlideIndex = index;
+    }
+
+    
+    
+    // Move the slides container
+    contentSlider.style.transform = `translateX(-${currentSlideIndex * 100 }%)`;
+}
+
+// Add event listeners to the buttons
+prevBtn.addEventListener('click', () => {
+    goToSlide(currentSlideIndex - 1);
+    
+    renderCounter(currentSlideIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    goToSlide(currentSlideIndex + 1);
+    renderCounter(currentSlideIndex);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('counterLike: ' + counterLike);
+    like.textContent = counterLike;
+    dislike.textContent = counterDislike;
+})

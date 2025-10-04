@@ -64,19 +64,19 @@
     <main>
         <div class="container">
             <section class="preview">
-                <div class="preview-tabs-header">
-                    <h1 class="preview-tabs-header-title">
+                <div class="preview-tabs-header tabs-header">
+                    <h1 class="preview-tabs-header-title tabs-header-title">
                         Сейчас в кино
                     </h1>
                     <hr>
-                    <ul class="preview-tabs-header-items">
-                        <li class="preview-tabs-header-items-item active">Все</li>
-                        <li class="preview-tabs-header-items-item">Боевики</li>
-                        <li class="preview-tabs-header-items-item">Приключения</li>
-                        <li class="preview-tabs-header-items-item">Комедии</li>
-                        <li class="preview-tabs-header-items-item">Фантастика</li>
-                        <li class="preview-tabs-header-items-item">Триллеры</li>
-                        <li class="preview-tabs-header-items-item">Драма</li>
+                    <ul class="preview-tabs-header-items tabs-header-items">
+                        <li class="preview-tabs-header-items-item tabs-header-items-item active">Все</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Боевики</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Приключения</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Комедии</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Фантастика</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Триллеры</li>
+                        <li class="preview-tabs-header-items-item tabs-header-items-item">Драма</li>
                     </ul>
                 </div>
                 <div class="preview-tabs-content">
@@ -107,10 +107,125 @@
                     <div class="preview-tabs-content-top" id="seven-tabs-top"></div>
                     <div class="preview-tabs-content-bot" id="seven-tabs-bot"></div>
                 </div>
+                <a href="#" class="preview-btn">
+                    Все новинки
+                </a>
+            </section>
+
+            <section class="trailer">
+                <div class="trailer-header">
+                    <h1>
+                        Новые трейлеры
+                    </h1>
+                    <a href="#">
+                        <span>Все трейлеры</span>
+                        <img src="images/svg/arrow-right.svg" alt="arrow-right">
+                    </a>
+                </div>
+                <video src="./videos/Deadpool.mp4" controls></video>
+                <div class="trailer-tags">
+                    <div class="trailer-tags-mes">
+                        <h2 class="trailer-tags-title">
+                            Дедпул и Россомаха
+                        </h2>
+                        <ul class="header-messeges">
+                            <li>
+                                <a href="#" class="header-messeges-mes">
+                                    <img src="images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-messeges-mes">
+                                    <img src="images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-messeges-mes">
+                                    <img src="images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-messeges-mes">
+                                    <img src="images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="trailer-tags-reaction">
+                        <button class="reaction" id="like">
+                            <img src="images/svg/like.svg" alt="like">
+                            <span>
+                                3 245
+                            </span>
+                        </button>
+                        <button class="reaction" id="dislike">
+                            <img src="images/svg/dislike.svg" alt="dislike">
+                            <span>
+                                420
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="preview-card-container" id="card-cont">
+                    
+                </div>
+            </section>
+            <section class="popular">
+                <div class="tabs-header">
+                    <h1 class="tabs-header-title">
+                        Сейчас в кино
+                    </h1>
+                    <hr>
+                    <ul class="tabs-header-items">
+                        <li class="tabs-header-items-item active" id="popular-tab">Всё время</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2020</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2019</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2018</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2017</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2016</li>
+                        <li class="tabs-header-items-item" id="popular-tab">2015</li>
+                    </ul>
+                </div>
+                <div class="tabs-content">
+                    <div class="tabs-content-item">
+                        <div class="swiper-cont">
+                            <div class="swiper">
+                                <div class="swiper-item flex" id="pop-item-1"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                <div class="swiper-item " id="pop-item-2"></div>
+                                
+                            </div>
+                            <div class="swiper-btns-cont">
+                                <div class="swiper-prev-btn">
+                                    <img src="images/svg/prev-arrow.svg" alt="prev-arrow">
+                                </div>
+                                <p class="swiper-counter">
+                                    <span>1</span>/15
+                                </p>
+                                <div class="swiper-next-btn">
+                                    <img src="images/svg/next-arrow.svg" alt="next-arrow">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
-    <script src="Js/script.js"></script>
+    <script type="module" src="Js/script.js"></script>
 </body>
 </html>
