@@ -1,4 +1,4 @@
-//tabs
+//tabs head
 export const dataTabsTop = [
     {
         title: "Звёздные войны: Скайуокер. Восход",
@@ -59,7 +59,6 @@ export const dataTabsBot = [
         href: "#"
     }
 ]
-
 export const thirdDataTabsTop = [
     {
         title: "Побег из Претории",
@@ -120,6 +119,8 @@ export const thirdDataTabsBot = [
         href: "#"
     }
 ]
+
+//popular tabs
 export const popularFirstDataTabsBot = [
     {
         title: "Ford против Ferrari",
@@ -149,6 +150,67 @@ export const popularFirstDataTabsBot = [
         rating: "6.90",
         href: "#"
     }
+]
+export const popularSecondDataTabsBot = [
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "#"
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "#"
+    },
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "#"
+    },
+    {
+        title: "Однажды в… Голливуде",
+        subtitle: "Драма, комедия",
+        imageUrl: "images/png/holliwood.png",
+        rating: "6.20",
+        href: "#"
+    },
+]
+export const popularThirdDataTabsBot = [
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "#"
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "#"
+    },
+    {
+        title: "Однажды в… Голливуде",
+        subtitle: "Драма, комедия",
+        imageUrl: "images/png/holliwood.png",
+        rating: "6.20",
+        href: "#"
+    },
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "#"
+    },
+    
 ]
 
 
@@ -186,4 +248,117 @@ export const cardContent = [
         text: "Мулан",
         img: "./images/png/mini_mulan.png"
     },
+]
+
+//fees
+export const feesContent = [
+    {
+        id: "1",
+        title: "Бладшот",
+        price: "$13 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/bloodShot.png"
+    },
+    {
+        id: "2",
+        title: "Вперёд",
+        price: "$6.8 млн",
+        text: "$41.4 млн за 4 недели",
+        img: "images/png/forward.png"
+    },
+    {
+        id: "3",
+        title: "Человек-невидимка",
+        price: "$6.2 млн",
+        text: "$58.3 млн за 3 недели",
+        img: "images/png/invisible.png"
+    },
+    {
+        id: "4",
+        title: "Соник в кино",
+        price: "$2.9 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/sonic.png"
+    },
+    {
+        id: "5",
+        title: "Джентльмены",
+        price: "$1.8 млн",
+        text: "$78.7 млн за 11 недель",
+        img: "images/png/jentelmen.png"
+    }
+]
+export const feesSecondContent = [
+    {
+        id: "1",
+        title: "Бладшот",
+        price: "$13 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/bloodShot.png"
+    },
+    {
+        id: "2",
+        title: "Вперёд",
+        price: "$6.8 млн",
+        text: "$41.4 млн за 4 недели",
+        img: "images/png/forward.png"
+    },
+    {
+        id: "4",
+        title: "Соник в кино",
+        price: "$2.9 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/sonic.png"
+    },
+    {
+        id: "3",
+        title: "Человек-невидимка",
+        price: "$6.2 млн",
+        text: "$58.3 млн за 3 недели",
+        img: "images/png/invisible.png"
+    },
+    {
+        id: "5",
+        title: "Джентльмены",
+        price: "$1.8 млн",
+        text: "$78.7 млн за 11 недель",
+        img: "images/png/jentelmen.png"
+    }
+]
+export const feesThirdContent = [
+    {
+        id: "2",
+        title: "Вперёд",
+        price: "$6.8 млн",
+        text: "$41.4 млн за 4 недели",
+        img: "images/png/forward.png"
+    },
+    {
+        id: "1",
+        title: "Бладшот",
+        price: "$13 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/bloodShot.png"
+    },
+    {
+        id: "3",
+        title: "Человек-невидимка",
+        price: "$6.2 млн",
+        text: "$58.3 млн за 3 недели",
+        img: "images/png/invisible.png"
+    },
+    {
+        id: "4",
+        title: "Соник в кино",
+        price: "$2.9 млн",
+        text: "$15.1 млн за 4 недели",
+        img: "images/png/sonic.png"
+    },
+    {
+        id: "5",
+        title: "Джентльмены",
+        price: "$1.8 млн",
+        text: "$78.7 млн за 11 недель",
+        img: "images/png/jentelmen.png"
+    }
 ]

@@ -50,6 +50,10 @@ ul {
   animation-fill-mode: forwards;
 }
 
+.tabs-header-items-item:hover {
+  scale: 1.1;
+}
+
 /*header*/
 header .container {
   display: flex;
@@ -133,7 +137,7 @@ main {
   color: #fff;
 }
 
-.preview hr,.popular hr {
+.preview hr,.popular hr, hr {
   max-width: 52px;
   width: 100%;
 }
@@ -383,7 +387,7 @@ main {
 }
 .swiper-cont {
   position: relative;
-  max-width: 1420px;
+  max-width: 1432px;
   overflow-x: hidden;
 }
 .swiper {
@@ -393,7 +397,7 @@ main {
 }
 .swiper-item {
   display: flex;
-  min-width: 1427px;
+  min-width: 1432px;
   width: 100%;
   justify-content: space-between;
 }
@@ -414,6 +418,64 @@ main {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.interval {
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+.fees-head-title {
+  box-sizing: border-box;
+}
+
+.fees-head-title span {
+  margin-left: 19px;
+}
+
+.fees-bottom-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fees-card {
+  display: flex;
+}
+
+.fees-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 11px;
+}
+
+.fees-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.fees-card-price {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: left;
+  color: #f2f60f;
+
+  margin-top: 11px;
+}
+
+.fees-card-text {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.41);
+}
+
+.fees-card:hover {
+  transition: 0.3s;
+  scale: 1.1;
+}
+
 
 @keyframes unset {
   0% {

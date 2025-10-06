@@ -1,6 +1,6 @@
-import { dataTabsTop, dataTabsBot, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot } from "./data.js";
-import card from "./card.js"
-// import data from "./data.json" with { type: "json" };
+import { dataTabsTop, dataTabsBot, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot, popularSecondDataTabsBot, popularThirdDataTabsBot, feesContent } from "./data.js";
+import card from "./card.js";
+import fees from './fees.js';
 
 console.log(dataTabsBot);
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderMovies('third-tabs-top', thirdDataTabsTop);
     renderMovies('third-tabs-bot', thirdDataTabsBot);
     renderMovies('pop-item-1', popularFirstDataTabsBot);
-    renderMovies('pop-item-2', popularFirstDataTabsBot);
+    renderMovies('pop-item-2', popularSecondDataTabsBot);
 });
 
 // counter of likes & dislikes
@@ -122,72 +122,52 @@ cardContent.forEach(element => {
 
 
 const popTabs = document.querySelectorAll('#popular-tab');
-const popTabsContent = document.querySelectorAll('.preview-tabs-content');
+const popTabsContent = document.querySelectorAll('.popular .tabs-content-item');
 popTabs.forEach((element, index) => {
     element.addEventListener('click', () => {
         popTabs.forEach(i => {
             i.classList.remove('active');
         })
         element.classList.add('active');
-        // tabsContent.forEach((item, i) => {
-        //     if (i !== index) {
-        //         item.classList.add('hidden');
-        //     }
-        //     else {
-        //         item.classList.remove('hidden');
-        //     }
-        // })
+        popTabsContent.forEach((item, i) => {
+            if (i !== index) {
+                item.classList.remove('anim');
+                item.classList.add('hidden');
+            }
+            else {
+                item.classList.remove('hidden');
+                item.classList.add('anim');
+            }
+        })
     })
 });
 
-const prevBtn = document.querySelector('.swiper-prev-btn');
-const nextBtn = document.querySelector('.swiper-next-btn');
-const contentSlider = document.querySelector('.swiper');
-const sliderItem = document.querySelectorAll('.swiper-item');
-let currentSlideIndex = 0; // Tracks the currently active slide
-const totalSlides = sliderItem.length;
-
-
-function renderCounter(count) {
-    if (currentSlideIndex < 0) {
-        count = totalSlides;
-    } else if (currentSlideIndex >= totalSlides) {
-        document.querySelector('.swiper-counter span').textContent = 1;
-    } else {
-        document.querySelector('.swiper-counter span').textContent = currentSlideIndex + 1;
-    }
-    
-}
-function goToSlide(index) {
-    // Ensure the index loops around (infinite loop)
-    if (index < 0) {
-        currentSlideIndex = totalSlides - 1;
-    } else if (index >= totalSlides) {
-        currentSlideIndex = 0;
-    } else {
-        currentSlideIndex = index;
-    }
-
-    
-    
-    // Move the slides container
-    contentSlider.style.transform = `translateX(-${currentSlideIndex * 100 }%)`;
-}
-
-// Add event listeners to the buttons
-prevBtn.addEventListener('click', () => {
-    goToSlide(currentSlideIndex - 1);
-    
-    renderCounter(currentSlideIndex);
+const feesTabs = document.querySelectorAll('.fees-tabs-header-items-item');
+const tabsFeesContent = document.querySelectorAll('.fees-bottom-item');
+feesTabs.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        feesTabs.forEach(i => {
+            i.classList.remove('active');
+        })
+        element.classList.add('active');
+        tabsFeesContent.forEach((item, i) => {
+            if (i !== index) {
+                item.classList.add('hidden');
+                item.classList.remove('anim');
+            }
+            else {
+                item.classList.remove('hidden');
+                item.classList.add('anim');
+            }
+        })
+    })
 });
 
-nextBtn.addEventListener('click', () => {
-    goToSlide(currentSlideIndex + 1);
-    renderCounter(currentSlideIndex);
-});
+const feesCont = document.querySelectorAll('#fees-card');
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('counterLike: ' + counterLike);
-    like.textContent = counterLike;
-    dislike.textContent = counterDislike;
+
+feesContent.forEach(i => {
+    feesCont.forEach(element => {
+        element.innerHTML += fees(i.id, i.title, i.price, i.text, i.img);
+    })
 })
