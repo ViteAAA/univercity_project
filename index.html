@@ -9,9 +9,14 @@
     <title>Cinema</title>
 </head>
 <body>
+    <div class="sidebar transition" id="sidebar">
+        <div class="sidebar-close" id="sidebar-content"><img src="images/svg/close.svg" alt="close"></div>
+        <div class="sidebar-content"></div>
+    </div>
     <!-- <img src="images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
+            <img src="images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
             <img src="images/svg/search.svg" alt="search" class="header-search header-search-adapt">
             <div>
                 <div class="header-links">
@@ -531,6 +536,7 @@
             </a>
         </div>
     </footer>
+    <script src="Js/render-menu.js"></script>
     <script type="module" src="Js/script.js"></script>
     <script src="Js/swiper-slider.js"></script>
 </body>
