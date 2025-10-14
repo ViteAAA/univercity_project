@@ -61,6 +61,15 @@ header .container {
   align-items: center;
 }
 
+header .header-search-adapt {
+  display: none;
+}
+
+.menu-adapt {
+  display: none;
+}
+
+
 .header-messeges {
   display: flex;
   align-items: center;
@@ -397,7 +406,7 @@ main {
 }
 .swiper-item {
   display: flex;
-  min-width: 1432px;
+  min-width: 100%;
   width: 100%;
   justify-content: space-between;
 }
@@ -474,6 +483,199 @@ main {
 .fees-card:hover {
   transition: 0.3s;
   scale: 1.1;
+}
+
+/*footer*/
+footer {
+  margin-top: 100px;
+}
+
+.footer-head {
+  padding-top: 76px;
+  padding-bottom: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../images/png/footer-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer h1 {
+  font-weight: 900;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+  max-width: 704px;
+}
+
+.footer-form {
+  max-width: 715px;
+  width: 100%;
+}
+
+.footer-form-input-cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.footer-form-input-cont input:first-child {
+  max-width: 425px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 8px;
+  border-radius: 10px;
+  padding: 22px 27px;
+  border: none;
+  box-shadow: none;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 167%;
+  color: rgba(21, 26, 38, 0.6);
+}
+
+
+
+.footer-form-input-cont input:last-child {
+  max-width: 182px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  background: #f2f60f;
+  transition: 0.3s;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 167%;
+  color: #151a26;
+}
+
+.footer-form-input-cont input:last-child:hover {
+  opacity: 0.8;
+}
+
+.footer-form-checkbox-cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.footer-form-checkbox-cont input:focus {
+  accent-color: #f2f60f;
+}
+
+.footer-form-checkbox-cont label {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-form-checkbox-cont label a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #f2f60f;
+}
+
+.footer-bot {
+  margin-top: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bot ul:first-child {
+  margin-bottom: 34px;
+}
+
+.footer-bot-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 119%;
+  text-align: center;
+  color: rgba(227, 230, 240, 0.72);
+}
+
+.footer-bot-href {
+  margin-top: 26px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 119%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: rgba(227, 230, 240, 0.72);
+}
+
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 10px;
+  }
+  header .header-search {
+    display: none;
+  }
+  header .header-search-adapt {
+    display: block;
+  }
+  header .menu {
+    display: none;
+  }
+  .menu-adapt {
+    display: block !important;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  .preview-tabs-header, .tabs-header {
+    display: inline;
+  }
+  .tabs-header hr {
+    display: none;
+  }
+  .tabs-content {
+    margin-top: 30px;
+  }
+  .tabs-header h1 {
+    margin-bottom: 5px;
+  }
+  .preview-tabs-content-top, .preview-tabs-content-bot {
+    gap: 15px;
+  }
+  .preview-tabs-content-top a, .preview-tabs-content-bot a {
+    max-width: 340px;
+    max-height: 520px;
+    display: block;
+  }
+  .preview-tabs-content-top a .preview-tabs-content-card-img, .preview-tabs-content-bot a .preview-tabs-content-card-img {
+    background-size: cover !important;
+  }
+}
+@media (max-width: 1000px) {
+  .preview-tabs-content-top, .preview-tabs-content-bot {
+    gap: 15px;
+  }
+  .preview-tabs-content-top a, .preview-tabs-content-bot a {
+    max-width: 200px;
+    display: block;
+  }
+  .preview-tabs-content-top a .preview-tabs-content-card-img, .preview-tabs-content-bot a .preview-tabs-content-card-img {
+    height: 275px;
+    background-size: cover !important;
+  }
 }
 
 
