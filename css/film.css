@@ -1,0 +1,99 @@
+.content {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+
+main {
+    margin-top: 47px;
+}
+
+.preview-top {
+    display: grid;
+    gap: 58px;
+    grid-template-columns: auto auto;
+}
+
+.preview-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preview-top-right h1 {
+    font-weight: 900;
+    font-size: 65px;
+    color: #fff;
+}
+
+.preview-top-right-subtitle {
+    font-weight: 500;
+    font-size: 25px;
+    color: #fff;
+}
+
+.preview-top-right-about {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 167%;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.preview-top-right-film {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    padding: 20px 36px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    max-width: fit-content;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.preview-top-right-film img {
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.preview-top-right-film span {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.preview-top-right-film div {
+    width: 110%;
+    height: 0;
+    background: #f2f60f;
+    position: absolute;
+    left: -5%;
+    bottom: -5%;
+    transition: 0.3s;
+}
+
+.preview-top-right-film:hover div {
+    height: 110%;
+}
+
+.preview-top-right-film:hover img {
+    filter: invert(100%);
+}
+
+.preview-top-right-film:hover span {
+    color: black;
+}
+
+.preview-top-right-film:hover {
+    border-color: transparent;
+}

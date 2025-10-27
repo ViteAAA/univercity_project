@@ -171,3 +171,5 @@ feesContent.forEach(i => {
         element.innerHTML += fees(i.id, i.title, i.price, i.text, i.img);
     })
 })
+
+

@@ -5,28 +5,28 @@ export const dataTabsTop = [
         subtitle: "Фантастика, фэнтези, боевик, приключения",
         imageUrl: "images/png/starWars.png",
         rating: "6.70",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Побег из Претории",
         subtitle: "Триллер",
         imageUrl: "images/png/run.png",
         rating: "6.70",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Джокер",
         subtitle: "Триллер, драма, криминал",
         imageUrl: "images/png/joker.png",
         rating: "8.50",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Джентльмены",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/gentelmen.png",
         rating: "8.00",
-        href: "#"
+        href: "film_page.html"
     }
 ]
 export const dataTabsBot = [
@@ -35,28 +35,28 @@ export const dataTabsBot = [
         subtitle: "Биография, спорт, драма, боевик",
         imageUrl: "images/png/ford&ferrary.png",
         rating: "8.10",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "3022",
         subtitle: "Фантастика, триллер",
         imageUrl: "images/png/future.png",
         rating: "4.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Хищные птицы: Потрясающая история Харли Квинн",
         subtitle: "Боевик, криминал, комедия",
         imageUrl: "images/png/birds.png",
         rating: "6.20",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Плохие парни навсегда",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/boys.png",
         rating: "6.90",
-        href: "#"
+        href: "film_page.html"
     }
 ]
 export const thirdDataTabsTop = [
@@ -65,28 +65,28 @@ export const thirdDataTabsTop = [
         subtitle: "Триллер",
         imageUrl: "images/png/run.png",
         rating: "6.70",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Джокер",
         subtitle: "Триллер, драма, криминал",
         imageUrl: "images/png/joker.png",
         rating: "8.50",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Звёздные войны: Скайуокер. Восход",
         subtitle: "Фантастика, фэнтези, боевик, приключения",
         imageUrl: "images/png/starWars.png",
         rating: "6.70",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Джентльмены",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/gentelmen.png",
         rating: "8.00",
-        href: "#"
+        href: "film_page.html"
     }
 ]
 export const thirdDataTabsBot = [
@@ -95,28 +95,28 @@ export const thirdDataTabsBot = [
         subtitle: "Биография, спорт, драма, боевик",
         imageUrl: "images/png/ford&ferrary.png",
         rating: "8.10",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "3022",
         subtitle: "Фантастика, триллер",
         imageUrl: "images/png/future.png",
         rating: "4.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Хищные птицы: Потрясающая история Харли Квинн",
         subtitle: "Боевик, криминал, комедия",
         imageUrl: "images/png/birds.png",
         rating: "6.20",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Плохие парни навсегда",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/boys.png",
         rating: "6.90",
-        href: "#"
+        href: "film_page.html"
     }
 ]
 
@@ -127,28 +127,28 @@ export const popularFirstDataTabsBot = [
         subtitle: "Биография, спорт, драма, боевик",
         imageUrl: "images/png/ford&ferrary.png",
         rating: "8.10",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "3022",
         subtitle: "Фантастика, триллер",
         imageUrl: "images/png/future.png",
         rating: "4.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Однажды в… Голливуде",
         subtitle: "Драма, комедия",
         imageUrl: "images/png/holliwood.png",
         rating: "6.20",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Плохие парни навсегда",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/boys.png",
         rating: "6.90",
-        href: "#"
+        href: "film_page.html"
     }
 ]
 export const popularSecondDataTabsBot = [
@@ -157,28 +157,28 @@ export const popularSecondDataTabsBot = [
         subtitle: "Фантастика, триллер",
         imageUrl: "images/png/future.png",
         rating: "4.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Ford против Ferrari",
         subtitle: "Биография, спорт, драма, боевик",
         imageUrl: "images/png/ford&ferrary.png",
         rating: "8.10",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Плохие парни навсегда",
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/boys.png",
         rating: "6.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Однажды в… Голливуде",
         subtitle: "Драма, комедия",
         imageUrl: "images/png/holliwood.png",
         rating: "6.20",
-        href: "#"
+        href: "film_page.html"
     },
 ]
 export const popularThirdDataTabsBot = [
@@ -187,28 +187,28 @@ export const popularThirdDataTabsBot = [
         subtitle: "Боевик, комедия, криминал",
         imageUrl: "images/png/boys.png",
         rating: "6.90",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Ford против Ferrari",
         subtitle: "Биография, спорт, драма, боевик",
         imageUrl: "images/png/ford&ferrary.png",
         rating: "8.10",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "Однажды в… Голливуде",
         subtitle: "Драма, комедия",
         imageUrl: "images/png/holliwood.png",
         rating: "6.20",
-        href: "#"
+        href: "film_page.html"
     },
     {
         title: "3022",
         subtitle: "Фантастика, триллер",
         imageUrl: "images/png/future.png",
         rating: "4.90",
-        href: "#"
+        href: "film_page.html"
     },
     
 ]

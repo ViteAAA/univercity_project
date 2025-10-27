@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Cinema</title>
 </head>
 <body>
     <div class="sidebar transition" id="sidebar">
-        <div class="sidebar-close" id="sidebar-content"><img src="images/svg/close.svg" alt="close"></div>
-        <div class="sidebar-content"></div>
+        <div class="sidebar-close" id="sidebar-close"><img src="images/svg/close.svg" alt="close"></div>
+        <div class="sidebar-content" id="sidebar-content"></div>
     </div>
     <!-- <img src="images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
-            <img src="images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
-            <img src="images/svg/search.svg" alt="search" class="header-search header-search-adapt">
+            <div class="header-adapt-cont">
+                <img src="images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
+                <img src="images/svg/search.svg" alt="search" class="header-search header-search-adapt">
+            </div>
             <div>
                 <div class="header-links">
                     <a href="#" class="logo-href">
@@ -87,15 +90,20 @@
                         Сейчас в кино
                     </h1>
                     <hr>
-                    <ul class="preview-tabs-header-items tabs-header-items">
-                        <li class="preview-tabs-header-items-item tabs-header-items-item active">Все</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Боевики</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Приключения</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Комедии</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Фантастика</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Триллеры</li>
-                        <li class="preview-tabs-header-items-item tabs-header-items-item">Драма</li>
-                    </ul>
+                    <div class="img-cont">
+                        <img src="images/svg/burger-menu.svg" alt="burger-menu" class="preview-burger-menu">
+                    </div>
+                    <div id="preview-menu">
+                        <ul class="preview-tabs-header-items tabs-header-items">
+                            <li class="preview-tabs-header-items-item tabs-header-items-item active">Все</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Боевики</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Приключения</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Комедии</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Фантастика</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Триллеры</li>
+                            <li class="preview-tabs-header-items-item tabs-header-items-item">Драма</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="preview-tabs-content tabs-content">
                     <div class="preview-tabs-content-top" id="first-tabs-top"></div>
