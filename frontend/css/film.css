@@ -97,3 +97,45 @@ main {
 .preview-top-right-film:hover {
     border-color: transparent;
 }
+
+.about {
+    margin-top: 45px;
+}
+
+.about, .about-left, .about-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-left, .about-right {
+    max-width: 500px;
+    width: 100%;
+    
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-left li, .about-right li {
+    margin-bottom: 25px;
+}
+.about-left li:last-child, .about-right li:last-child {
+    margin-bottom: 0;
+}
+
+#about-render {
+    font-weight: 400;
+    color: #f2f60f;
+
+}
+
+.trailer {
+    margin-top: 100px;
+}
+
+.trailer-title {
+    font-weight: 900;
+    font-size: 65px;
+    color: #fff;
+    margin-bottom: 20px;
+}

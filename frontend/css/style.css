@@ -149,6 +149,14 @@ header .header-search-adapt {
   text-decoration: none;
 }
 
+.menu ul li {
+  transition: 0.3s;
+}
+
+.menu ul li:hover {
+  transform: scale(1.1);
+}
+
 .header-btns {
   display: flex;
   align-self: center;

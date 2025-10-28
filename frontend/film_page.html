@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/svg/favicon.svg">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="images/svg/favicon.svg">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="images/svg/favicon-dark.svg">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
@@ -98,13 +99,49 @@
                             <p class="preview-top-right-about">
                                 Двое борцов за свободу отбывают срок в одной из самых строгих тюрем мира — в «Претории». Вместе с другими узниками они планируют дерзкий и опасный побег. Но придумать план — это только первый шаг. Шаг второй — реализация плана.
                             </p>
-                            <a href="#" class="preview-top-right-film">
+                            <a href="pages/film_preview.html" class="preview-top-right-film">
                                 <img src="images/svg/play.svg" alt="play"> <span>Смотреть</span>
                                 <div></div>
                             </a>
                         </div>
                     </div>
                 </div>
+                <div class="about">
+                    <div class="about-left">
+                        <ul>
+                            <li>Год:</li>
+                            <li>Страна:</li>
+                            <li>Слоган:</li>
+                            <li>Режиссер:</li>
+                            <li>Сценарий:</li>
+                            <li>Продюсер:</li>
+                            <li>Оператор:</li>
+                            <li>Композитор:</li>
+                        </ul>
+                        <ul id="about-render">
+                        </ul>
+                    </div>
+                    <div class="about-right">
+                        <ul>
+                            <li>Художник:</li>
+                            <li>Монтаж:</li>
+                            <li>Жанр:</li>
+                            <li>Сборы в мире:</li>
+                            <li>Премьера (мир):</li>
+                            <li>Премьера (РБ):</li>
+                            <li>Возраст:</li>
+                            <li>Время:</li>
+                        </ul>
+                        <ul id="about-render">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="trailer">
+                <div class="trailer-title">
+                    Трейлер
+                </div>
+                <video src="./videos/Deadpool.mp4" controls></video>
             </div>
         </div>
     </main>
@@ -172,6 +209,7 @@
             </a>
         </div>
     </footer>
+    <script type="module" src="Js/render-about.js"></script>
     <script src="Js/render-menu.js"></script>
     <script type="module" src="Js/script.js"></script>
     <script src="Js/swiper-slider.js"></script>
