@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Таблица
+{% endblock %}
+
+{% block content %}
+<h1>Создать элемент</h1>
+
+<form method="post" class="form-control">
+    <input type="text" name="title" id="title" placeholder="Введите заголовок темы" class="form-control">
+    <input type="text" name="text" id="text" placeholder="Введите текст темы" class="form-control">
+    <button type="submit" class="btn btn-success">
+        Добавить
+    </button>
+</form>
+{% endblock %}

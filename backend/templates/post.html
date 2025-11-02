@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все записи
+{% endblock %}
+
+{% block content %}
+<h1>Все элемент</h1>
+
+        <div class="row mb-3 text-center">
+            <div class="col-4 themed-grid-col">ID</div>
+            <div class="col-4 themed-grid-col">TITLE</div>
+            <div class="col-4 themed-grid-col">TEXT</div>
+        </div>
+    {% for post in posts %}
+        <div class="row mb-3 text-center">
+            <div class="col-4 themed-grid-col">{{ post.id }}</div>
+            <div class="col-4 themed-grid-col">{{ post.title }}</div>
+            <div class="col-4 themed-grid-col">{{post.text}}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
