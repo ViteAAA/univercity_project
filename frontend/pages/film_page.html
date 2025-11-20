@@ -3,51 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" media="(prefers-color-scheme: dark)" href="images/svg/favicon.svg">
-    <link rel="icon" media="(prefers-color-scheme: light)" href="images/svg/favicon-dark.svg">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font/stylesheet.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/film.css">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="../images/svg/favicon.svg">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="../images/svg/favicon-dark.svg">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/font/stylesheet.css">
+    <link rel="stylesheet" href="../css/film.css">
     <title>Cinema</title>
 </head>
 <body>
     <div class="sidebar transition" id="sidebar">
-        <div class="sidebar-close" id="sidebar-close"><img src="images/svg/close.svg" alt="close"></div>
+        <div class="sidebar-close" id="sidebar-close"><img src="../images/svg/close.svg" alt="close"></div>
         <div class="sidebar-content" id="sidebar-content"></div>
     </div>
-    <!-- <img src="images/png/background.png" alt="background" class="background"> -->
+    <!-- <img src="../images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
             <div class="header-adapt-cont">
-                <img src="images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
-                <img src="images/svg/search.svg" alt="search" class="header-search header-search-adapt">
+                <img src="../images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
+                <img src="../images/svg/search.svg" alt="search" class="header-search header-search-adapt">
             </div>
             <div>
                 <div class="header-links">
                     <a href="index.html" class="logo-href">
-                        <img src="images/svg/logo.svg" alt="logo" class="logo-href-image">
+                        <img src="../images/svg/logo.svg" alt="logo" class="logo-href-image">
                     </a>
                 </div>
                 <ul class="header-messeges">
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                            <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                            <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                            <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                            <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
                         </a>
                     </li>
                 </ul>
@@ -64,7 +63,7 @@
                 </ul>
             </nav>
             <div class="header-btns">
-                <img src="images/svg/search.svg" alt="search" class="header-search">
+                <img src="../images/svg/search.svg" alt="search" class="header-search">
                 <button class="header-login">
                     Войти
                 </button>
@@ -88,7 +87,7 @@
             <div class="content">
                 <div class="preview">
                     <div class="preview-top">
-                        <img class="preview-top-left" src="images/png/run.png">
+                        <img class="preview-top-left" src="../images/png/run.png">
                         <div class="preview-top-right">
                             <h1>
                                 Побег из Претории
@@ -100,13 +99,13 @@
                                 Двое борцов за свободу отбывают срок в одной из самых строгих тюрем мира — в «Претории». Вместе с другими узниками они планируют дерзкий и опасный побег. Но придумать план — это только первый шаг. Шаг второй — реализация плана.
                             </p>
                             <a href="pages/film_preview.html" class="preview-top-right-film">
-                                <img src="images/svg/play.svg" alt="play"> <span>Смотреть</span>
+                                <img src="../images/svg/play.svg" alt="play"> <span>Смотреть</span>
                                 <div></div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="about">
+                <div class="about hidden">
                     <div class="about-left">
                         <ul>
                             <li>Год:</li>
@@ -118,7 +117,7 @@
                             <li>Оператор:</li>
                             <li>Композитор:</li>
                         </ul>
-                        <ul id="about-render">
+                        <ul id="">
                         </ul>
                     </div>
                     <div class="about-right">
@@ -132,22 +131,107 @@
                             <li>Возраст:</li>
                             <li>Время:</li>
                         </ul>
-                        <ul id="about-render">
+                        <ul id="">
                         </ul>
                     </div>
+                </div>
+                <div class="about">
+                    <ul class="about-left">
+                        <li id="about-info">Год:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Страна:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Слоган:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Режиссер:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Сценарий:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Продюсер:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Оператор:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Композитор:</li>
+                        <li id="about-render"></li>
+                    </ul>
+                    <ul class="about-right">
+                        <li id="about-info">Художник:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Монтаж:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Жанр:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Сборы в мире:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Премьера (мир):</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Премьера (РБ):</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Возраст:</li>
+                        <li id="about-render"></li>
+                        <li id="about-info">Время:</li>
+                        <li id="about-render"></li>
+                    </ul>
                 </div>
             </div>
             <div class="trailer">
                 <div class="trailer-title">
                     Трейлер
                 </div>
-                <video src="./videos/Deadpool.mp4" controls></video>
+                <video src="../videos/Deadpool.mp4" controls></video>
+            </div>
+            <div class="reviews">
+                <div class="reviews-top">
+                    <h1 class="reviews-top-title">
+                        Рецензии к фильму
+                    </h1>
+                    <button class="reviews-top-add">
+                        Добавить рецензию
+                    </button>
+                </div>
+                <div class="reviews-btns-cont">
+                    <div class="reviews-btns">
+                        <button>
+                            <p>Всего</p>
+                            <span class="all">
+                                36
+                            </span>
+                        </button>
+                        <button>
+                            <p>Положительных</p>
+                            <span class="good">
+                                28
+                            </span>
+                        </button>
+                        <button>
+                            <p>Отрицательных</p>
+                            <span class="neg">
+                                3
+                            </span>
+                        </button>
+                        <button>
+                            <p>Нейтральных рецензий</p>
+                            <span class="normal">
+                                5
+                            </span>
+                        </button>
+                        <button>
+                            <p>Процент</p>
+                            <span class="good">
+                                87%
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="reviews-content" id="reviews-content">
+                    
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <div class="footer-head">
-            <a href="#"><img src="images/svg/footer-logo.svg" alt="logo"></a>
+            <a href="#"><img src="../images/svg/footer-logo.svg" alt="logo"></a>
             <h1>
                 Подпишитесь на E-mail рассылку
             </h1>
@@ -171,22 +255,22 @@
             <ul class="header-messeges">
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                        <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                        <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                        <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                        <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
                     </a>
                 </li>
             </ul>
@@ -209,9 +293,10 @@
             </a>
         </div>
     </footer>
-    <script type="module" src="Js/render-about.js"></script>
-    <script src="Js/render-menu.js"></script>
-    <script type="module" src="Js/script.js"></script>
-    <script src="Js/swiper-slider.js"></script>
+    <script type="module" src="../Js/render-about.js"></script>
+    <script src="../Js/render-menu.js"></script>
+    <script type="module" src="../Js/script.js"></script>
+    <script src="../Js/swiper-slider.js"></script>
+    <script type="module" src="../Js/render-reviews.js"></script>
 </body>
 </html>

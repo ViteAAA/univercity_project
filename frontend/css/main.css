@@ -353,3 +353,27 @@ main {
   transition: 0.3s;
   scale: 1.1;
 }
+
+.popular {
+  margin-top: 75px;
+}
+
+
+
+@keyframes unset {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes setBg {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}

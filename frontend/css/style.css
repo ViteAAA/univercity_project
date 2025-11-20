@@ -16,6 +16,8 @@ a {
 
 :root {
   --color-card-subtitle: #f2f60f;
+  --color-btn: #3657CB;
+  --border-radius: 10px;
 }
 
 video {
@@ -377,8 +379,11 @@ footer h1 {
     background-size: cover !important;
   }
   .fees-bottom-item {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .fees-bottom-item.hidden {
+    display: none !important;
   }
 }
 

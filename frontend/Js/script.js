@@ -116,9 +116,12 @@ dislikeButton.addEventListener('click', () => {
 
 const cardCont = document.querySelector('#card-cont');
 
-cardContent.forEach(element => {
-    cardCont.innerHTML += card(element.text, element.img);
-})
+if (cardCont) {
+    cardContent.forEach(element => {
+        cardCont.innerHTML += card(element.text, element.img);
+    })
+}
+
 
 
 const popTabs = document.querySelectorAll('#popular-tab');

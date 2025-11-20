@@ -11,12 +11,14 @@ closeBtn.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     function renderMenu(btn, element) {
-        btn.addEventListener('click', () => {
-            console.log(element.innerHTML)
-            element.classList.remove('hidden');
-            sidebarCont.innerHTML = element.innerHTML;
-            sidebar.classList.remove('transition');
-        })
+        if (btn) {
+            btn.addEventListener('click', () => {
+                console.log(element.innerHTML)
+                element.classList.remove('hidden');
+                sidebarCont.innerHTML = element.innerHTML;
+                sidebar.classList.remove('transition');
+            })
+        }
     }
 
     renderMenu(document.querySelector('#header-burger-menu'), document.querySelector('.menu'));

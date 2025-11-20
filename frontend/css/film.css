@@ -1,3 +1,5 @@
+@import url(./style.css);
+
 .content {
     max-width: 1150px;
     margin: 0 auto;
@@ -102,9 +104,19 @@ main {
     margin-top: 45px;
 }
 
-.about, .about-left, .about-right {
+/* .about, .about-left, .about-right {
     display: flex;
     justify-content: space-between;
+} */
+
+.about {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.about-left, .about-right {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .about-left, .about-right {
@@ -138,4 +150,255 @@ main {
     font-size: 65px;
     color: #fff;
     margin-bottom: 20px;
+}
+
+
+.reviews {
+    margin-top: 75px;
+}
+
+.reviews-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.reviews-top-title {
+    font-weight: 900;
+    font-size: 65px;
+    color: #fff;
+}
+
+.reviews-top-add {
+    background: var(--color-btn);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 18px 33px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 167%;
+    color: #fff;
+}
+.reviews-top-add:hover {
+    opacity: 0.8;
+}
+
+.reviews-btns-cont {
+    overflow: auto;
+}
+
+.reviews-btns {
+    min-width: 1300px;
+    margin-top: 63px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.reviews-btns button {
+    padding: 16px 22px;
+    border: none;
+    background-color: #1b2133;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+    
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+.reviews-btns button * {
+    position: relative;
+    z-index: 1;
+}
+
+.reviews-btns button span {
+    border-radius: 5px;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.all {
+    background: rgba(54, 87, 203, 0.3);
+    color: #3657cb;
+}
+.good {
+    background: rgba(87, 208, 67, 0.38);
+    color: #57d043;
+}
+.bad {
+    background: rgba(208, 67, 93, 0.38);
+    color: #d04366;
+}
+.neit {
+    background: rgba(255, 240, 101, 0.38);
+    color: #fff065;
+}
+
+
+
+.normal {
+    background: rgba(255, 240, 101, 0.3);
+    color: #fff065;
+}
+
+.recen {
+    border-radius: 5px;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+}
+
+.reviews-content {
+    margin-top: 40px;
+}
+
+.reviews-btns button::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s;
+}
+
+.reviews-btns button:hover::after {
+    background-color: var(--color-btn);
+    opacity: 0.5;
+}
+
+.reviews-item {
+    background: #191e2e;
+    padding: 46px;
+    border: 5px solid #fff065;
+    border-radius: var(--border-radius);
+}
+
+.reviews-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews-item-top-about {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.reviews-item-top-avatar {
+    border-radius: 100%;
+    width: 115px;
+    height: 115px;
+    background-image: url('../images/svg/example.svg');
+}
+
+.reviews-item-top-about h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.reviews-item-top-awards .reaction {
+  margin-right: 8px;
+}
+.reviews-item-top-awards .reaction:last-child {
+  margin-right: 0;
+}
+
+.reaction {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.reviews-item-top-awards span {
+  display: block;
+  color: #fff;
+  margin-top: 5px;
+  
+}
+
+.reviews-item-bot {
+    margin-top: 44px;
+}
+
+.reviews-item-bot-title {
+    margin-bottom: 21px;
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.reviews-item-bot-title h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.reviews-item-bot-title span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #cbcbcb;
+}
+
+.reviews-item-bot-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+}
+
+.reviews-item-bot-text-par {
+    margin-top: 20px;
+}
+
+.reviews-item {
+    margin-top: 30px;
+}
+.reviews-item:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .preview-top-right h1 {
+        font-size: 45px;
+    }
+    .preview-top-right-subtitle {
+        font-size: 20px;   
+    }
+    .preview-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .about-right, .about-left {
+        grid-template-columns: 50% auto;
+    }
+    .about-right {
+        margin-top: 25px;
+    }
+    
+}
+@media screen and (max-width: 445px) {
+    .header-search-adapt {
+        display: none !important;
+    }
 }
