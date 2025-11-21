@@ -18,6 +18,7 @@ a {
   --color-card-subtitle: #f2f60f;
   --color-btn: #3657CB;
   --border-radius: 10px;
+  --input-col: #f2f60f;
 }
 
 video {
@@ -38,7 +39,7 @@ ul {
 }
 .hidden {
   display: none !important;
-  animation-name: unset;
+  /* animation-name: unset; */
   /* animation-duration: 0.3s;
   animation-fill-mode: forwards; */
 }
@@ -65,12 +66,21 @@ ul {
   animation-fill-mode: forwards;
 }
 
+.tabs-header-title {
+  font-weight: 900;
+  font-size: 65px;
+  color: #fff;
+}
+
 .tabs-header-items-item:hover {
   scale: 1.1;
 }
 
 .sidebar {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -84,7 +94,17 @@ ul {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  font-weight: 700;
+
 }
+
+.sidebar-content ul li a {
+  font-size: 13px;
+  line-height: 319%;
+  text-align: center;
+  color: #fff;
+}
+
 .sidebar-close {
   position: absolute;
   right: 20px;
@@ -94,6 +114,187 @@ ul {
 .img-cont {
   display: none;
 }
+
+
+
+
+.registration-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1a2233; /* Фон формы */
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.registration-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+
+    font-weight: 800;
+    font-size: 40px;
+    color: #fff;
+}
+
+.registration-form input,
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #262e3d; /* Фон полей ввода */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box; /* Важно для учета padding в ширине */
+    font-size: 16px;
+}
+
+.registration-form input::placeholder {
+    color: #aaa;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+    width: fit-content !important;
+    accent-color: var(--input-col);
+  }
+  
+
+.checkbox-container label {
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #fffb00; /* Ярко-желтая кнопка */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.login-box {
+  background-color: #1a1a2e; /* Темный фон формы */
+  padding: 40px 30px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+
+    font-weight: 800;
+    font-size: 40px;
+    color: #fff;
+}
+
+.login-container input,
+.login-container input[type="password"],
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-container input,
+.login-container input[type="password"] {
+    background-color: #2c2c44; /* Фон полей ввода */
+    color: #fff;
+}
+
+.login-btn {
+    background-color: #fffb00; /* Ярко-желтая кнопка входа */
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-btn {
+    background-color: #2c2c44; /* Кнопка регистрации */
+    color: #fff;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #4a90e2; /* Синяя ссылка восстановления пароля */
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+
 
 /*header*/
 header .container {
@@ -181,6 +382,9 @@ header .header-search-adapt {
   color: #fff;
 }
 
+.tabs-content {
+  margin-top: 30px;
+}
 
 
 
@@ -252,7 +456,7 @@ footer h1 {
   box-shadow: none;
   border: none;
   cursor: pointer;
-  background: #f2f60f;
+  background: var(--input-col);
   transition: 0.3s;
 
   font-weight: 700;
@@ -272,7 +476,7 @@ footer h1 {
 }
 
 .footer-form-checkbox-cont input:focus {
-  accent-color: #f2f60f;
+  accent-color: var(--input-col);
 }
 
 .footer-form-checkbox-cont label {
@@ -287,7 +491,7 @@ footer h1 {
 .footer-form-checkbox-cont label a {
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #f2f60f;
+  color: var(--input-col);
 }
 
 .footer-bot {
@@ -325,6 +529,9 @@ footer h1 {
   .header-adapt-cont {
     display: block;
   }
+  /* .swiper-item a:last-child {
+    display: none !important;
+  } */
   .container {
     padding: 0 10px;
   }
@@ -348,9 +555,7 @@ footer h1 {
   .tabs-header hr {
     display: none;
   }
-  .tabs-content {
-    margin-top: 30px;
-  }
+  
   .tabs-header h1 {
     margin-bottom: 5px;
   }
@@ -385,11 +590,8 @@ footer h1 {
   .fees-bottom-item.hidden {
     display: none !important;
   }
-}
-
-@media (max-width: 768px) {
-  .preview-tabs-content-top a:last-child, .preview-tabs-content-bot a:last-child, .swiper-item a:last-child  {
-    display: none;
+  .hidden-clild  {
+    display: none !important;
   }
   .menu {
     display: none !important;
@@ -410,6 +612,33 @@ footer h1 {
   }
   .header-burger-menu {
     display: block;
+  }
+  .tabs-header-items {
+    display: none !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .trailer-tags-mes {
+    display: inline !important;
+  }
+  .hidden-clild  {
+    display: block;
+  }
+  .fees-bottom-item {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-form-input-cont {
+    display: inline;
+  }
+  .footer-form-input-cont input {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 10px;
+    height: 50px;
+  }
+  .footer-form-checkbox-cont label {
+    text-align: left;
   }
 }
 

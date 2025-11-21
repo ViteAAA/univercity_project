@@ -14,7 +14,51 @@
 <body>
     <div class="sidebar transition" id="sidebar">
         <div class="sidebar-close" id="sidebar-close"><img src="images/svg/close.svg" alt="close"></div>
-        <div class="sidebar-content" id="sidebar-content"></div>
+        <div class="sidebar-content">
+            <a href="#" class="logo-href">
+                <img src="images/svg/logo.svg" alt="logo" class="logo-href-image">
+            </a>
+            <div  id="sidebar-content"></div>
+        </div>
+    </div>
+    <div class="login-container hidden" id="login">
+        <div class="login-box">
+            <div class="close-btn" id="login-close">X</div>
+            <h1>Войти</h1>
+            <form>
+                <input type="text" placeholder="Логин, почта или телефон" required>
+                <input type="password" placeholder="Ваш пароль" required>
+                <button type="submit" class="login-btn">Войти</button>
+            </form>
+            <button class="register-btn">Зарегистрироваться</button>
+            <a href="#" class="forgot-password">Восстановить пароль</a>
+            
+        </div>
+    </div>
+    <div class="registration-container hidden" id="register">
+        <div class="registration-form">
+            <button class="close-btn" id="register-close">&times;</button>
+            <h1>Зарегистрироваться</h1>
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Придумайте логин">
+                <input type="password" placeholder="Придумайте пароль">
+                <input type="password" placeholder="Повторите пароль">
+                <input type="text" placeholder="Номер телефона или e-mail">
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="policy" checked>
+                    <label for="policy">Соглашаюсь на условия политики конфиденциальности</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="data" checked>
+                    <label for="data">Соглашаюсь на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
     </div>
     <!-- <img src="images/png/background.png" alt="background" class="background"> -->
     <header>
@@ -55,17 +99,14 @@
             <nav class="menu">
                 <ul>
                     <li><a href="#">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
-                    <li><a href="#">Фильмы</a></li>
-                    <li><a href="#">Актёры</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="pages/media.html">Медиа</a></li>
                     <li><a href="#">Подборки</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>
             </nav>
             <div class="header-btns">
                 <img src="images/svg/search.svg" alt="search" class="header-search">
-                <button class="header-login">
+                <button class="header-login" id="login-open">
                     Войти
                 </button>
             </div>
@@ -74,10 +115,7 @@
         <nav class="menu menu-adapt">
             <ul>
                 <li><a href="#">Афиша</a></li>
-                <li><a href="#">Медиа</a></li>
-                <li><a href="#">Фильмы</a></li>
-                <li><a href="#">Актёры</a></li>
-                <li><a href="#">Новости</a></li>
+                <li><a href="pages/media.html">Медиа</a></li>
                 <li><a href="#">Подборки</a></li>
                 <li><a href="#">Категории</a></li>
             </ul>
@@ -107,33 +145,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="preview-tabs-content tabs-content">
-                    <div class="preview-tabs-content-top" id="first-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="first-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content" id="first-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="second-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="second-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content hidden" id="second-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="third-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="third-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content hidden" id="third-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="fourth-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="fourth-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content hidden" id="fourth-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="fifth-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="fifht-tabs-bot"></div>
+                <div class="tabs-contentpreview-tabs-content hidden" id="fifth-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="six-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="six-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content  hidden" id="sixth-tabs">
                 </div>
-                <div class="preview-tabs-content tabs-content hidden">
-                    <div class="preview-tabs-content-top" id="seven-tabs-top"></div>
-                    <div class="preview-tabs-content-bot" id="seven-tabs-bot"></div>
+                <div class="tabs-content preview-tabs-content hidden" id="seventh-tabs">
                 </div>
                 <a href="#" class="preview-btn">
                     Все новинки
@@ -214,7 +238,7 @@
                         <li class="tabs-header-items-item" id="popular-tab">2015</li>
                     </ul>
                 </div>
-                <div class="tabs-content">
+                <div>
                     <div class="tabs-content-item">
                         <div class="swiper-cont">
                             <div class="swiper">
@@ -530,10 +554,7 @@
             <nav class="menu">
                 <ul>
                     <li><a href="#">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
-                    <li><a href="#">Фильмы</a></li>
-                    <li><a href="#">Актёры</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="pages/media.html">Медиа</a></li>
                     <li><a href="#">Подборки</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>

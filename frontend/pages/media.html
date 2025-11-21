@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="../images/svg/favicon.svg">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="../images/svg/favicon-dark.svg">
+    <link rel="stylesheet" href="../css/font/stylesheet.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <title>Media</title>
+</head>
+<body>
+    <div class="login-container hidden" id="login">
+        <div class="login-box">
+            <div class="close-btn" id="login-close">X</div>
+            <h1>Войти</h1>
+            <form>
+                <input type="text" placeholder="Логин, почта или телефон" required>
+                <input type="password" placeholder="Ваш пароль" required>
+                <button type="submit" class="login-btn">Войти</button>
+            </form>
+            <button class="register-btn">Зарегистрироваться</button>
+            <!-- <a href="#" class="forgot-password">Восстановить пароль</a> -->
+            
+        </div>
+    </div>
+    <div class="registration-container hidden" id="register">
+        <div class="registration-form">
+            <button class="close-btn" id="register-close">&times;</button>
+            <h1>Зарегистрироваться</h1>
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Придумайте логин">
+                <input type="password" placeholder="Придумайте пароль">
+                <input type="password" placeholder="Повторите пароль">
+                <input type="text" placeholder="Номер телефона или e-mail">
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="policy" checked>
+                    <label for="policy">Соглашаюсь на условия политики конфиденциальности</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="data" checked>
+                    <label for="data">Соглашаюсь на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="header-adapt-cont">
+                <img src="../images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
+                <img src="../images/svg/search.svg" alt="search" class="header-search header-search-adapt">
+            </div>
+            <div>
+                <div class="header-links">
+                    <a href="../index.html" class="logo-href">
+                        <img src="../images/svg/logo.svg" alt="logo" class="logo-href-image">
+                    </a>
+                </div>
+                <ul class="header-messeges">
+                    <li>
+                        <a href="#" class="header-messeges-mes">
+                            <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-messeges-mes">
+                            <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-messeges-mes">
+                            <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-messeges-mes">
+                            <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Афиша</a></li>
+                    <li><a href="#">Медиа</a></li>
+                    <li><a href="#">Подборки</a></li>
+                    <li><a href="#">Категории</a></li>
+                </ul>
+            </nav>
+            <div class="header-btns">
+                <img src="../images/svg/search.svg" alt="search" class="header-search">
+                <button class="header-login" id="login-open">
+                    Войти
+                </button>
+            </div>
+            
+        </div>
+        <nav class="menu menu-adapt">
+            <ul>
+                <li><a href="#">Афиша</a></li>
+                <li><a href="#">Медиа</a></li>
+                <li><a href="#">Подборки</a></li>
+                <li><a href="#">Категории</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="tabs-header-title">
+                Медиа
+            </h1>
+            <div class="media" id="media-content">
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-head">
+            <a href="#"><img src="../images/svg/footer-logo.svg" alt="logo"></a>
+            <h1>
+                Подпишитесь на E-mail рассылку
+            </h1>
+            <p class="footer-subtitle">
+                Если хотиет быть в курсе последних новостей и новинок кино - заполните форму ниже и оформите бесплатную E-mail рассылку! 
+            </p>
+            <form class="footer-form">
+                <div class="footer-form-input-cont">
+                    <input type="email" placeholder="Email">
+                    <input type="submit" value="Подписаться">
+                </div>
+                <div class="footer-form-checkbox-cont">
+                    <input type="checkbox" id="checkbox" >
+                    <label for="checkbox">
+                        Соглашаюсь на условия <a href="#">политики конфиденциальности</a>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="footer-bot">
+            <ul class="header-messeges">
+                <li>
+                    <a href="#" class="header-messeges-mes">
+                        <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header-messeges-mes">
+                        <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header-messeges-mes">
+                        <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header-messeges-mes">
+                        <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                    </a>
+                </li>
+            </ul>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Афиша</a></li>
+                    <li><a href="#">Медиа</a></li>
+                    <li><a href="#">Подборки</a></li>
+                    <li><a href="#">Категории</a></li>
+                </ul>
+            </nav>
+            <p class="footer-bot-text">
+                2020 © Kinoarea.  Все права защищены
+            </p>
+            <a href="#" class="footer-bot-href">
+                Политика конфиденциальности
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="../Js/render-media.js"></script>
+    <script type="module" src="../Js/script.js"></script>
+</body>
+</html>

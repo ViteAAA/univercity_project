@@ -9,11 +9,6 @@ main {
   align-items: center;
 }
 
-.tabs-header-title {
-  font-weight: 900;
-  font-size: 65px;
-  color: #fff;
-}
 
 .preview hr,.popular hr, hr {
   max-width: 52px;
@@ -43,7 +38,10 @@ main {
 
 .preview-tabs-content {
   margin-bottom: 71px;
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  row-gap: 20px;
 }
 
 .preview-tabs-content-top {
@@ -312,8 +310,9 @@ main {
 }
 
 .fees-bottom-item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100% !important;
 }
 
 .fees-card {
@@ -358,6 +357,62 @@ main {
   margin-top: 75px;
 }
 
+@media screen and (max-width: 1250px) {
+  .fees-bottom-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
+@media screen and (max-width: 1120px) {
+  .fees-bottom {
+    display: inline !important;
+  }
+  .fees-bottom-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+}
+
+@media (max-width: 1000px) {
+  .preview-tabs-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    row-gap: 20px;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fees-bottom-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .preview-tabs-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    row-gap: 20px;
+
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  .fees-bottom-item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .preview-tabs-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 
 @keyframes unset {

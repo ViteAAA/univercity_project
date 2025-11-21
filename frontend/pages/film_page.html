@@ -15,6 +15,45 @@
         <div class="sidebar-close" id="sidebar-close"><img src="../images/svg/close.svg" alt="close"></div>
         <div class="sidebar-content" id="sidebar-content"></div>
     </div>
+    <div class="login-container hidden" id="login">
+        <div class="login-box">
+            <div class="close-btn" id="login-close">X</div>
+            <h1>Войти</h1>
+            <form>
+                <input type="text" placeholder="Логин, почта или телефон" required>
+                <input type="password" placeholder="Ваш пароль" required>
+                <button type="submit" class="login-btn">Войти</button>
+            </form>
+            <button class="register-btn">Зарегистрироваться</button>
+            <a href="#" class="forgot-password">Восстановить пароль</a>
+            
+        </div>
+    </div>
+    <div class="registration-container hidden" id="register">
+        <div class="registration-form">
+            <button class="close-btn" id="register-close">&times;</button>
+            <h1>Зарегистрироваться</h1>
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Придумайте логин">
+                <input type="password" placeholder="Придумайте пароль">
+                <input type="password" placeholder="Повторите пароль">
+                <input type="text" placeholder="Номер телефона или e-mail">
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="policy" checked>
+                    <label for="policy">Соглашаюсь на условия политики конфиденциальности</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="data" checked>
+                    <label for="data">Соглашаюсь на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
     <!-- <img src="../images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
@@ -53,18 +92,15 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
-                    <li><a href="#">Фильмы</a></li>
-                    <li><a href="#">Актёры</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="../index.html">Афиша</a></li>
+                    <li><a href="media.html">Медиа</a></li>
                     <li><a href="#">Подборки</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>
             </nav>
             <div class="header-btns">
                 <img src="../images/svg/search.svg" alt="search" class="header-search">
-                <button class="header-login">
+                <button class="header-login" id="login-open">
                     Войти
                 </button>
             </div>
@@ -72,11 +108,8 @@
         </div>
         <nav class="menu menu-adapt">
             <ul>
-                <li><a href="#">Афиша</a></li>
-                <li><a href="#">Медиа</a></li>
-                <li><a href="#">Фильмы</a></li>
-                <li><a href="#">Актёры</a></li>
-                <li><a href="#">Новости</a></li>
+                <li><a href="../index.html">Афиша</a></li>
+                <li><a href="media.html">Медиа</a></li>
                 <li><a href="#">Подборки</a></li>
                 <li><a href="#">Категории</a></li>
             </ul>
@@ -231,7 +264,7 @@
     </main>
     <footer>
         <div class="footer-head">
-            <a href="#"><img src="../images/svg/footer-logo.svg" alt="logo"></a>
+            <a href="../index.html"><img src="../images/svg/footer-logo.svg" alt="logo"></a>
             <h1>
                 Подпишитесь на E-mail рассылку
             </h1>
@@ -276,11 +309,8 @@
             </ul>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
-                    <li><a href="#">Фильмы</a></li>
-                    <li><a href="#">Актёры</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="../index.html">Афиша</a></li>
+                    <li><a href="media.html">Медиа</a></li>
                     <li><a href="#">Подборки</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>

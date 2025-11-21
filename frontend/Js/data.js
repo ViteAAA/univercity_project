@@ -1,4 +1,184 @@
 //tabs head
+
+export const dataTabsFirst = [
+    {
+        title: "Звёздные войны: Скайуокер. Восход",
+        subtitle: "Фантастика, фэнтези, боевик, приключения",
+        imageUrl: "images/png/starWars.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Побег из Претории",
+        subtitle: "Триллер",
+        imageUrl: "images/png/run.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джокер",
+        subtitle: "Триллер, драма, криминал",
+        imageUrl: "images/png/joker.png",
+        rating: "8.50",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джентльмены",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/gentelmen.png",
+        rating: "8.00",
+        href: "pages/film_page.html"
+        
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "pages/pages/film_page.html"
+    },
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Хищные птицы: Потрясающая история Харли Квинн",
+        subtitle: "Боевик, криминал, комедия",
+        imageUrl: "images/png/birds.png",
+        rating: "6.20",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "pages/film_page.html"
+    }
+]
+export const dataTabsSecond = [
+    {
+        title: "Звёздные войны: Скайуокер. Восход",
+        subtitle: "Фантастика, фэнтези, боевик, приключения",
+        imageUrl: "images/png/starWars.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Побег из Претории",
+        subtitle: "Триллер",
+        imageUrl: "images/png/run.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джокер",
+        subtitle: "Триллер, драма, криминал",
+        imageUrl: "images/png/joker.png",
+        rating: "8.50",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джентльмены",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/gentelmen.png",
+        rating: "8.00",
+        href: "pages/film_page.html"
+        
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "pages/pages/film_page.html"
+    },
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Хищные птицы: Потрясающая история Харли Квинн",
+        subtitle: "Боевик, криминал, комедия",
+        imageUrl: "images/png/birds.png",
+        rating: "6.20",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "pages/film_page.html"
+    }
+]
+export const dataTabsThird = [
+    {
+        title: "Побег из Претории",
+        subtitle: "Триллер",
+        imageUrl: "images/png/run.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джокер",
+        subtitle: "Триллер, драма, криминал",
+        imageUrl: "images/png/joker.png",
+        rating: "8.50",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Звёздные войны: Скайуокер. Восход",
+        subtitle: "Фантастика, фэнтези, боевик, приключения",
+        imageUrl: "images/png/starWars.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джентльмены",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/gentelmen.png",
+        rating: "8.00",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Хищные птицы: Потрясающая история Харли Квинн",
+        subtitle: "Боевик, криминал, комедия",
+        imageUrl: "images/png/birds.png",
+        rating: "6.20",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "pages/film_page.html"
+    }
+
+]
+
+
 export const dataTabsTop = [
     {
         title: "Звёздные войны: Скайуокер. Восход",
@@ -398,5 +578,65 @@ export const reviews = [
                 "«Побег из Претории» стоит посмотреть зрителям, плохо знакомым с историей апартеида. Я выделила для себя немало интересной информации, которая осела в моей памяти надолго. И даже если вы большие знатоки того, что происходило в ЮАР, это все равно не помешает вам получить удовольствие от просмотра фильм о побеге с отличной игрой Дэниэла Рэдклиффа.",
                 "8 из 10"
             ]
+    }
+]
+
+export const media = [
+    {
+        title: "Звёздные войны: Скайуокер. Восход",
+        subtitle: "Фантастика, фэнтези, боевик, приключения",
+        imageUrl: "images/png/starWars.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Побег из Претории",
+        subtitle: "Триллер",
+        imageUrl: "images/png/run.png",
+        rating: "6.70",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джокер",
+        subtitle: "Триллер, драма, криминал",
+        imageUrl: "images/png/joker.png",
+        rating: "8.50",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Джентльмены",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/gentelmen.png",
+        rating: "8.00",
+        href: "pages/film_page.html"
+        
+    },
+    {
+        title: "Ford против Ferrari",
+        subtitle: "Биография, спорт, драма, боевик",
+        imageUrl: "images/png/ford&ferrary.png",
+        rating: "8.10",
+        href: "pages/pages/film_page.html"
+    },
+    {
+        title: "3022",
+        subtitle: "Фантастика, триллер",
+        imageUrl: "images/png/future.png",
+        rating: "4.90",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Хищные птицы: Потрясающая история Харли Квинн",
+        subtitle: "Боевик, криминал, комедия",
+        imageUrl: "images/png/birds.png",
+        rating: "6.20",
+        href: "pages/film_page.html"
+    },
+    {
+        title: "Плохие парни навсегда",
+        subtitle: "Боевик, комедия, криминал",
+        imageUrl: "images/png/boys.png",
+        rating: "6.90",
+        href: "pages/film_page.html"
     }
 ]

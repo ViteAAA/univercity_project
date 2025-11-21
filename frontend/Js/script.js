@@ -1,8 +1,63 @@
-import { dataTabsTop, dataTabsBot, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot, popularSecondDataTabsBot, popularThirdDataTabsBot, feesContent } from "./data.js";
+import { dataTabsTop, dataTabsBot, dataTabsFirst, dataTabsSecond, dataTabsThird, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot, popularSecondDataTabsBot, popularThirdDataTabsBot, feesContent } from "./data.js";
 import card from "./card.js";
 import fees from './fees.js';
 
-console.log(dataTabsBot);
+
+
+// Login Window
+const loginCont = document.querySelector('#login');
+const loginOpen = document.querySelector('#login-open');
+const loginBtn = document.querySelector('#login-close');
+const switchToReg = document.querySelector('.register-btn')
+
+const registerCont = document.querySelector('#register');
+const registerCloseBtn = document.querySelector('#register-close');
+
+if (loginOpen) {
+    loginBtn.addEventListener("click", () => {
+        loginCont.classList.add('hidden');
+        loginCont.classList.remove('anim');
+    })
+    loginOpen.addEventListener("click", () => {
+        loginCont.classList.remove('hidden');
+        loginCont.classList.add('anim');
+        
+    })
+    loginCont.addEventListener("click", (click) => {
+        if (click.target.classList.contains('login-container')) {
+            loginCont.classList.add('hidden');
+            loginCont.classList.remove('anim');
+        }
+    })
+    document.body.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && !loginCont.classList.contains('hidden')) {
+            loginCont.classList.add('hidden');
+            loginCont.classList.remove('anim');
+        }
+        if (event.key === "Escape" && !registerCont.classList.contains('hidden')) {
+            registerCont.classList.add('hidden');
+            registerCont.classList.remove('anim');
+        }
+    });
+    switchToReg.addEventListener("click", () => {
+        loginCont.classList.add('hidden');
+        loginCont.classList.remove('anim');
+
+        registerCont.classList.remove('hidden');
+        registerCont.classList.add('anim');
+    })
+    registerCloseBtn.addEventListener("click", () => {
+        registerCont.classList.add('hidden');
+        registerCont.classList.remove('anim');
+    })
+    registerCont.addEventListener("click", (click) => {
+        if (click.target.classList.contains('registration-container')) {
+            registerCont.classList.add('hidden');
+            registerCont.classList.remove('anim');
+        }
+    })
+}
+
 
 const tabs = document.querySelectorAll('.preview-tabs-header-items-item');
 const tabsContent = document.querySelectorAll('.preview-tabs-content');
@@ -42,10 +97,10 @@ function tabsRating(rate) {
     }
 }
 
-function createMovieCard(movie) {
+function createMovieCard(movie, numb) {
     const cardRate = tabsRating(movie.rating);
     return `
-        <a href="${movie.href}" class="preview-tabs-content-card">
+        <a href="${movie.href}" class="preview-tabs-content-card ${numb === 4 ? "hidden-clild" : ""}">
             <span class="preview-tabs-content-card-rating" style="background:${cardRate}">${movie.rating}</span>
             <div class="preview-tabs-content-card-img" style="background:url(${movie.imageUrl})">
                 <button class="preview-tabs-content-card-img-btn">
@@ -64,9 +119,12 @@ function renderMovies(containerId, cardData) {
     // const container = document.getElementById(containerId);
     const container = document.querySelectorAll(`#${containerId}`);
     let cardsHTML = '';
+    let numb = 0;
     
     cardData.forEach(card => {
-        cardsHTML += createMovieCard(card);
+        numb++;
+        cardsHTML += createMovieCard(card, numb);
+        numb = numb == 4 ? 0 : numb;
     });
     if (container.length === 1) {
         container[0].innerHTML = cardsHTML;
@@ -81,12 +139,17 @@ function renderMovies(containerId, cardData) {
 
 // Рендерим карточки при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
-    renderMovies('first-tabs-top', dataTabsTop);
-    renderMovies('first-tabs-bot', dataTabsBot);
-    renderMovies('second-tabs-top', dataTabsBot);
-    renderMovies('second-tabs-bot', dataTabsTop);
-    renderMovies('third-tabs-top', thirdDataTabsTop);
-    renderMovies('third-tabs-bot', thirdDataTabsBot);
+    // renderMovies('first-tabs-top', dataTabsTop);
+    // renderMovies('first-tabs-bot', dataTabsBot);
+    // renderMovies('second-tabs-top', dataTabsBot);
+    // renderMovies('second-tabs-bot', dataTabsTop);
+    // renderMovies('third-tabs-top', thirdDataTabsTop);
+    // renderMovies('third-tabs-bot', thirdDataTabsBot);
+    // renderMovies('pop-item-1', popularFirstDataTabsBot);
+    // renderMovies('pop-item-2', popularSecondDataTabsBot);
+    renderMovies('first-tabs', dataTabsFirst);
+    renderMovies('second-tabs', dataTabsSecond);
+    renderMovies('third-tabs', dataTabsThird);
     renderMovies('pop-item-1', popularFirstDataTabsBot);
     renderMovies('pop-item-2', popularSecondDataTabsBot);
 });
@@ -101,16 +164,18 @@ const dislike = document.querySelector('#dislike span');
 let counterLike = 0;
 let counterDislike = 0;
 
+if (like && dislike) {
+    likeButton.addEventListener('click', () => {
+        counterLike++;
+        like.textContent = counterLike;
+    });
+    
+    dislikeButton.addEventListener('click', () => {
+        counterDislike++;
+        dislike.textContent = counterDislike;
+    });
+}
 
-likeButton.addEventListener('click', () => {
-    counterLike++;
-    like.textContent = counterLike;
-});
-
-dislikeButton.addEventListener('click', () => {
-    counterDislike++;
-    dislike.textContent = counterDislike;
-});
 
 // cards
 
