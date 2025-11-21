@@ -40,13 +40,13 @@ function renderReview(element) {
                 </div>
                 <div class="reviews-item-top-awards">
                     <button class="reaction" id="like">
-                        <img src="images/svg/like.svg" alt="like">
+                        <img src="../images/svg/like.svg" alt="like">
                         <span>
                             3 245
                         </span>
                     </button>
                     <button class="reaction" id="dislike">
-                        <img src="images/svg/dislike.svg" alt="dislike">
+                        <img src="../images/svg/dislike.svg" alt="dislike">
                         <span>
                             420
                         </span>

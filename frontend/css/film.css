@@ -375,7 +375,7 @@ main {
 }
 
 @media (max-width: 768px) {
-    .preview-top-right h1 {
+    h1 {
         font-size: 45px;
     }
     .preview-top-right-subtitle {
@@ -402,5 +402,14 @@ main {
 @media screen and (max-width: 445px) {
     .header-search-adapt {
         display: none !important;
+    }
+    .reviews-top-title {
+        font-size: 34px;
+    }
+    .reviews-item-top-about {
+        display: block;
+    }
+    .reviews-item-top {
+        display: block;
     }
 }

@@ -1,7 +1,8 @@
 @import url(./style.css);
 
 main {
-    padding-top: 51px;
+  padding-top: 51px;
+  height: 100vh;
 }
 
 .media {
@@ -9,7 +10,6 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     row-gap: 30px;
-    height: 100vh;
 
     margin-top: 30px;
     padding-bottom: 100px;
@@ -82,3 +82,29 @@ main {
   display: none;
 }
 
+@media (max-width: 1000px) {
+  main {
+    height: fit-content;
+  }
+  .media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .media {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .media-item {
+    margin: 0 auto;
+  }
+}
