@@ -3,6 +3,7 @@ import card from "./card.js";
 import fees from './fees.js';
 
 
+let isAuth = false;
 
 // Login Window
 const loginCont = document.querySelector('#login');
@@ -15,21 +16,32 @@ const registerCloseBtn = document.querySelector('#register-close');
 
 if (loginOpen) {
     loginBtn.addEventListener("click", () => {
+        if (isAuth) {
+            return
+        }
         loginCont.classList.add('hidden');
         loginCont.classList.remove('anim');
     })
     loginOpen.addEventListener("click", () => {
+        if (isAuth) {
+            return
+        }
         loginCont.classList.remove('hidden');
         loginCont.classList.add('anim');
-        
     })
     loginCont.addEventListener("click", (click) => {
+        if (isAuth) {
+            return
+        }
         if (click.target.classList.contains('login-container')) {
             loginCont.classList.add('hidden');
             loginCont.classList.remove('anim');
         }
     })
     document.body.addEventListener("keydown", function(event) {
+        if (isAuth) {
+            return
+        }
         if (event.key === "Escape" && !loginCont.classList.contains('hidden')) {
             loginCont.classList.add('hidden');
             loginCont.classList.remove('anim');
@@ -40,6 +52,9 @@ if (loginOpen) {
         }
     });
     switchToReg.addEventListener("click", () => {
+        if (isAuth) {
+            return
+        }
         loginCont.classList.add('hidden');
         loginCont.classList.remove('anim');
 
@@ -47,11 +62,17 @@ if (loginOpen) {
         registerCont.classList.add('anim');
     })
     registerCloseBtn.addEventListener("click", () => {
+        if (isAuth) {
+            return
+        }
         registerCont.classList.add('hidden');
         registerCont.classList.remove('anim');
     })
     registerCont.addEventListener("click", (click) => {
         if (click.target.classList.contains('registration-container')) {
+            if (isAuth) {
+                return
+            }
             registerCont.classList.add('hidden');
             registerCont.classList.remove('anim');
         }
@@ -346,6 +367,7 @@ async function checkAuth() {
         
         if (response.ok) {
             const data = await response.json();
+            isAuth = true;
             console.log('Пользователь авторизован');
             return true;
         } else {
@@ -358,14 +380,114 @@ async function checkAuth() {
     }
 }
 
+// async function logOut() {
+//     try {
+//         console.log('Starting logout process...');
+        
+//         const response = await fetch('http://127.0.0.1:8000/users/logout', {
+//             method: 'POST',  // ← ИЗМЕНИТЕ НА POST
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             credentials: 'include'
+//         });
+        
+//         console.log('Logout response status:', response.status);
+        
+//         if (response.ok) {
+//             const data = await response.json();
+//             console.log('Logout successful:', data);
+            
+//             // Очищаем куки на клиенте
+//             clearAllCookies();
+            
+//             // Обновляем интерфейс
+//             // updateUIAfterLogout();
+            
+//             return true;
+//         } else {
+//             const errorText = await response.text();
+//             console.log('Logout failed:', response.status, errorText);
+            
+//             // Все равно очищаем куки на клиенте
+//             clearAllCookies();
+//             // updateUIAfterLogout();
+            
+//             return false;
+//         }
+//     } catch (error) {
+//         console.error('Logout error:', error);
+        
+//         // При ошибке сети все равно очищаем локально
+//         clearAllCookies();
+//         // updateUIAfterLogout();
+        
+//         return false;
+//     }
+// }
 
-document.addEventListener("DOMContentLoaded", checkAuth().then(isAuthenticated => {
+async function logOut() {
+    try {
+        const response = await fetch('http://127.0.0.1:8000/users/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }, // Важно: отправляем куки
+            credentials: 'include' 
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            isAuth = true;
+            console.log('Пользователь авторизован');
+        } else {
+            console.log('Пользователь не авторизован');
+        }
+    } catch (error) {
+        console.error('Ошибка проверки авторизации:', error);
+    }
+}
+
+
+function clearAllCookies() {
+    const cookies = document.cookie.split(";");
+    
+    for (let cookie of cookies) {
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+        
+        // Удаляем куку
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
+    
+    console.log('All cookies cleared locally');
+}
+
+checkAuth().then(isAuthenticated => {
     // Использование
     if (isAuthenticated) {
-        console.log(true)
+        console.log(isAuth)
     } else {
-        console.log(false)
+        console.log(isAuth)
     }
-}))
+    isAuth = isAuthenticated;
+    if (isAuth) {
+        loginOpen.textContent = "Выйти";
+    }
+    
+})
 
-document.addEventListener("click", () => console.log("click"))
+if (loginOpen) { 
+    loginOpen.addEventListener("click", () => {
+        console.log("click")
+        if (!isAuth) {
+            return
+        }
+        logOut()
+    })
+}
+
+
+
+
+

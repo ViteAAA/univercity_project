@@ -73,6 +73,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://127.0.0.1:5500", "http://localhost:5500", "https://viteaaa.github.io"],  # Ваш фронтенд origin
+    allow_origin_regex='https?://127.0.0.1:5500.*',
     allow_credentials=True,  # ВАЖНО: должно быть True для кук
     allow_methods=["*"],
     allow_headers=["*"],

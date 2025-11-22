@@ -62,6 +62,11 @@ async def login(creds: UserLoginSchema, response: Response, session: SessionUser
         detail="Incorrect username or password"
     )
 
+@router.post("/logout")
+async def logout(response: Response):
+    response.delete_cookie(key=config.JWT_ACCESS_COOKIE_NAME)
+    return {"access": True}
+
 @router.get("/protected", dependencies=[Depends(security.access_token_required)])
 async def is_auth():
     return {"access_token": True}

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dbfbb40-f704-4a25-aac9-63dfd49a3537" name="Changes" comment="" />
+    <list default="true" id="5dbfbb40-f704-4a25-aac9-63dfd49a3537" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/Js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/Js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/css/film.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/css/film.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/pages/film_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/pages/film_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/pages/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/pages/media.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

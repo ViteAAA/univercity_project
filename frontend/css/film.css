@@ -237,7 +237,7 @@ main {
     background: rgba(87, 208, 67, 0.38);
     color: #57d043;
 }
-.bad {
+.neg {
     background: rgba(208, 67, 93, 0.38);
     color: #d04366;
 }

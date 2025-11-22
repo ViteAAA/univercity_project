@@ -24,9 +24,9 @@
         <div class="login-box">
             <div class="close-btn" id="login-close">X</div>
             <h1>Войти</h1>
-            <form>
-                <input type="text" placeholder="Логин, почта или телефон" required>
-                <input type="password" placeholder="Ваш пароль" required>
+            <form id="loginForm">
+                <input name="nickName" type="text" placeholder="Логин, почта или телефон" required>
+                <input name="password" type="password" placeholder="Ваш пароль" required>
                 <button type="submit" class="login-btn">Войти</button>
             </form>
             <button class="register-btn">Зарегистрироваться</button>
@@ -38,13 +38,13 @@
         <div class="registration-form">
             <button class="close-btn" id="register-close">&times;</button>
             <h1>Зарегистрироваться</h1>
-            <form>
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Фамилия">
-                <input type="text" placeholder="Придумайте логин">
-                <input type="password" placeholder="Придумайте пароль">
-                <input type="password" placeholder="Повторите пароль">
-                <input type="text" placeholder="Номер телефона или e-mail">
+            <form id="registrationForm">
+                <input name="name" type="text" placeholder="Имя" required>
+                <input name="femail" type="text" placeholder="Фамилия" required>
+                <input name="username" type="text" placeholder="Придумайте логин" required>
+                <input name="password" type="password" placeholder="Придумайте пароль" required>
+                <input name="repeat-password" type="password" placeholder="Повторите пароль" required>
+                <input name="number" type="text" placeholder="Номер телефона или e-mail" required>
                 
                 <div class="checkbox-container">
                     <input type="checkbox" id="policy" checked>
@@ -68,7 +68,7 @@
             </div>
             <div>
                 <div class="header-links">
-                    <a href="index.html" class="logo-href">
+                    <a href="../index.html" class="logo-href">
                         <img src="../images/svg/logo.svg" alt="logo" class="logo-href-image">
                     </a>
                 </div>
