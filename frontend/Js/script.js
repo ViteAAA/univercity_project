@@ -241,3 +241,126 @@ feesContent.forEach(i => {
 })
 
 
+
+
+// Send to Backend
+document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Валидация паролей
+    const password = this.querySelector('input[name="password"]').value;
+    const repeatPassword = this.querySelector('input[name="repeat-password"]').value;
+    
+    if (password !== repeatPassword) {
+        showMessage('Пароли не совпадают!', 'error');
+        return;
+    }
+    
+    // Сбор данных формы
+    const formData = {
+        name: this.querySelector('input[name="name"]').value,
+        femail: this.querySelector('input[name="femail"]').value,
+        username: this.querySelector('input[name="username"]').value,
+        password: password,
+        number: this.querySelector('input[name="number"]').value,
+    };
+    
+    try {
+        const response = await fetch('http://127.0.0.1:8000/users/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            showMessage('Регистрация успешна!', 'success');
+            console.log('Успешно:', result);
+            // Перенаправление или очистка формы
+            this.reset();
+        } else {
+            const error = await response.json();
+            showMessage(`Ошибка: ${error.detail || 'Неизвестная ошибка'}`, 'error');
+            console.error('Ошибка сервера:', error);
+        }
+    } catch (error) {
+        console.error('Ошибка сети:', error);
+    }
+
+    
+});
+
+
+// Is Register user?
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+
+    const formData = new FormData(this);
+    const loginData = {
+        username: formData.get('nickName'),  // Преобразуем nickName в username
+        password: formData.get('password')
+    };
+    
+    try {
+        const response = await fetch('http://127.0.0.1:8000/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData)
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            console.log(response)
+            
+            if (result.access === true) {
+                console.log('Вход выполнен успешно!', 'success');
+                // Перенаправление или другие действия после успешного входа
+            } else {
+                console.log('Неверные учетные данные', 'error');
+            }
+        } else {
+            console.log('Ошибка сервера. Попробуйте позже.', 'error');
+        }
+    } catch (error) {
+        console.error('Ошибка:', error);
+        showMessage('Ошибка сети. Проверьте подключение.', 'error');
+    }
+});
+
+
+async function checkAuth() {
+    try {
+        const response = await fetch('http://127.0.0.1:8000/users/protected', {
+            method: 'GET',
+            credentials: 'include'  // Важно: отправляем куки
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Пользователь авторизован');
+            return true;
+        } else {
+            console.log('Пользователь не авторизован');
+            return false;
+        }
+    } catch (error) {
+        console.error('Ошибка проверки авторизации:', error);
+        return false;
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", checkAuth().then(isAuthenticated => {
+    // Использование
+    if (isAuthenticated) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}))
+
