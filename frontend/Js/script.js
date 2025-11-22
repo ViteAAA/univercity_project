@@ -364,3 +364,4 @@ document.addEventListener("DOMContentLoaded", checkAuth().then(isAuthenticated =
     }
 }))
 
+document.addEventListener("click", console.log("click"))
