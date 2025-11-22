@@ -72,10 +72,11 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500", "http://localhost:5500", "*"],  # Ваш фронтенд origin
+    allow_origins=["http://127.0.0.1:5500", "http://localhost:5500", "https://viteaaa.github.io"],  # Ваш фронтенд origin
     allow_credentials=True,  # ВАЖНО: должно быть True для кук
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]  # Добавьте эту строку
 )
 
 engine = create_async_engine("sqlite+aiosqlite:///films.db")

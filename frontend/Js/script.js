@@ -310,6 +310,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include',
             body: JSON.stringify(loginData)
         });
         
@@ -337,7 +338,10 @@ async function checkAuth() {
     try {
         const response = await fetch('http://127.0.0.1:8000/users/protected', {
             method: 'GET',
-            credentials: 'include'  // Важно: отправляем куки
+            headers: {
+                'Content-Type': 'application/json',
+            }, // Важно: отправляем куки
+            credentials: 'include' 
         });
         
         if (response.ok) {
@@ -364,4 +368,4 @@ document.addEventListener("DOMContentLoaded", checkAuth().then(isAuthenticated =
     }
 }))
 
-document.addEventListener("click", console.log("click"))
+document.addEventListener("click", () => console.log("click"))
