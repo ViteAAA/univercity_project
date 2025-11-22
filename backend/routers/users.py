@@ -11,10 +11,7 @@ config.JWT_SECRET_KEY = "SECRET_KEY"
 config.JWT_ACCESS_COOKIE_NAME = "my_access_token"
 config.JWT_TOKEN_LOCATION = ["cookies"]
 
-config.JWT_COOKIE_SAMESITE = "lax"
-config.JWT_COOKIE_SECURE = False  # Для разработки без HTTPS
-config.JWT_COOKIE_CSRF_PROTECT = False  # Для разработки отключите CSRF
-config.JWT_COOKIE_DOMAIN = None  # Для localhost
+
 
 security = AuthX(config=config)
 
