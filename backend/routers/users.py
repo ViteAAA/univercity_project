@@ -1,6 +1,9 @@
+from datetime import timedelta
 
 from fastapi import APIRouter, HTTPException, status, Response, Depends
 from sqlalchemy import select
+from sqlalchemy.cyextension.processors import to_str
+
 from database import SessionUserDep
 from models import UserModel, UserLoginModel
 from authx import AuthX, AuthXConfig
@@ -10,6 +13,7 @@ config = AuthXConfig()
 config.JWT_SECRET_KEY = "SECRET_KEY"
 config.JWT_ACCESS_COOKIE_NAME = "my_access_token"
 config.JWT_TOKEN_LOCATION = ["cookies"]
+config.JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=24)
 
 
 
@@ -46,12 +50,17 @@ async def login(creds: UserLoginSchema, response: Response, session: SessionUser
     query = select(UserLoginModel)
     result = await session.execute(query)
     isUser: bool = False
+    count = 0
     for user in result.scalars():
+        count += 1
         if creds.username == user.username and creds.password == user.password:
             isUser = True
             break
     if isUser:
-        token = security.create_access_token(uid="5")
+        token = security.create_access_token(
+            uid=to_str(count),
+            data={"username": creds.username}
+        )
         response.set_cookie(
             key=config.JWT_ACCESS_COOKIE_NAME,
             value=token,
@@ -62,6 +71,7 @@ async def login(creds: UserLoginSchema, response: Response, session: SessionUser
         detail="Incorrect username or password"
     )
 
+
 @router.post("/logout")
 async def logout(response: Response):
     response.delete_cookie(key=config.JWT_ACCESS_COOKIE_NAME)
@@ -70,3 +80,7 @@ async def logout(response: Response):
 @router.get("/protected", dependencies=[Depends(security.access_token_required)])
 async def is_auth():
     return {"access_token": True}
+
+@router.get("/protected_username", dependencies=[Depends(security.access_token_required)])
+async def get_current_user(user = Depends(security.access_token_required)):
+    return {"username": user.username}

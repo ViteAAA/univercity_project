@@ -19,7 +19,7 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
@@ -32,7 +32,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="f7697400-755b-4566-8e08-70b038e3d26b" object-ref="schemas/users/tables/users" />
+      <object connection-id="f7697400-755b-4566-8e08-70b038e3d26b" object-ref="schemas/reviews/tables/reviews" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
@@ -40,7 +40,9 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="f7697400-755b-4566-8e08-70b038e3d26b" dataset="main.books" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="f7697400-755b-4566-8e08-70b038e3d26b" dataset="reviews.reviews" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="f7697400-755b-4566-8e08-70b038e3d26b" dataset="main.films" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="f7697400-755b-4566-8e08-70b038e3d26b" dataset="reviews.users" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="f7697400-755b-4566-8e08-70b038e3d26b" dataset="users.users" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
@@ -71,6 +73,7 @@
           <files>
             <file path="D:\GitHub\univercity_project\backend\users.db" schema="users" />
             <file path="D:\GitHub\univercity_project\backend\films.db" schema="main" />
+            <file path="D:\GitHub\univercity_project\backend\reviews.db" schema="reviews" />
           </files>
           <type value="NONE" />
           <user value="" />

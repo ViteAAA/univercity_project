@@ -1,5 +1,6 @@
 # schemas.py
 from pydantic import BaseModel
+from typing import List
 
 
 class UserPostSchema(BaseModel):
@@ -20,6 +21,17 @@ class FilmSchema(FilmPostSchema):
     id: int
 
 class UserSchema(UserPostSchema):
+    id: int
+
+class ReviewPostSchema(BaseModel):
+    username: str
+    type: str
+    avatar: str
+    title: str
+    text: List[str]
+
+
+class ReviewSchema(ReviewPostSchema):
     id: int
 
 

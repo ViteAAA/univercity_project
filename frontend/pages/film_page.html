@@ -59,6 +59,38 @@
             </form>
         </div>
     </div>
+    <div class="form-container hidden" id="reviewContainer">
+        <div class="form-content">
+            <button class="close-btn" id="reviewClose">&times;</button>
+            <h1>Добавить отзыв</h1>
+            <form method="POST" id="reviewForm">
+                <!-- Название статьи -->
+                <input type="text" name="article_title" placeholder="Название статьи" required>
+                
+                <!-- Выбор оценки -->
+                <div class="rating-options">
+                    <label>
+                        <input type="radio" name="rating" value="positive" checked>
+                        Положительная
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="neutral">
+                        Нейтральная
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="negative">
+                        Отрицательная
+                    </label>
+                </div>
+
+                <!-- Текст отзыва -->
+                <textarea name="review_text" rows="5" placeholder="Текст отзыва" required></textarea>
+                
+                <!-- Кнопка отправки -->
+                <button type="submit">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
     <!-- <img src="../images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
@@ -223,7 +255,7 @@
                     <h1 class="reviews-top-title">
                         Рецензии к фильму
                     </h1>
-                    <button class="reviews-top-add">
+                    <button class="reviews-top-add" id="reviewBtn">
                         Добавить рецензию
                     </button>
                 </div>
@@ -231,34 +263,29 @@
                     <div class="reviews-btns">
                         <button>
                             <p>Всего</p>
-                            <span class="all">
+                            <span class="all" id="allReviews">
                                 36
                             </span>
                         </button>
                         <button>
                             <p>Положительных</p>
-                            <span class="good">
+                            <span class="good" id="goodReviews">
                                 28
                             </span>
                         </button>
                         <button>
                             <p>Отрицательных</p>
-                            <span class="neg">
+                            <span class="neg" id="badReviews">
                                 3
                             </span>
                         </button>
                         <button>
                             <p>Нейтральных рецензий</p>
-                            <span class="normal">
+                            <span class="normal" id="okReviews">
                                 5
                             </span>
                         </button>
-                        <button>
-                            <p>Процент</p>
-                            <span class="good">
-                                87%
-                            </span>
-                        </button>
+                        
                     </div>
                 </div>
                 <div class="reviews-content" id="reviews-content">

@@ -3,10 +3,10 @@ import card from "./card.js";
 import fees from './fees.js';
 
 
-let isAuth = false;
+export let isAuth = false;
 
 // Login Window
-const loginCont = document.querySelector('#login');
+export const loginCont = document.querySelector('#login');
 const loginOpen = document.querySelector('#login-open');
 const loginBtn = document.querySelector('#login-close');
 const switchToReg = document.querySelector('.register-btn')
@@ -341,6 +341,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             
             if (result.access === true) {
                 console.log('Вход выполнен успешно!', 'success');
+                location.reload()
                 // Перенаправление или другие действия после успешного входа
             } else {
                 console.log('Неверные учетные данные', 'error');
@@ -440,6 +441,8 @@ async function logOut() {
             const data = await response.json();
             isAuth = true;
             console.log('Пользователь авторизован');
+            location.reload()
+            clearAllCookies()
         } else {
             console.log('Пользователь не авторизован');
         }

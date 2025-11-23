@@ -82,9 +82,11 @@ app.add_middleware(
 
 engine = create_async_engine("sqlite+aiosqlite:///films.db")
 engine_users = create_async_engine("sqlite+aiosqlite:///users.db")
+engine_reviews = create_async_engine("sqlite+aiosqlite:///reviews.db")
 
 new_session = async_sessionmaker(engine, expire_on_commit=False)
 new_user_session = async_sessionmaker(engine_users, expire_on_commit=False)
+new_review_session = async_sessionmaker(engine_reviews, expire_on_commit=False)
 
 
 async def get_session():
@@ -95,8 +97,17 @@ async def get_users_session():
     async with new_user_session() as session:
         yield session
 
+
+async def get_reviews_session():
+    async with new_review_session() as session:
+        yield session
+
 SessionDep = Annotated[AsyncSession, Depends(get_session)]
 SessionUserDep = Annotated[AsyncSession, Depends(get_users_session)]
+SessionReviewDep = Annotated[AsyncSession, Depends(get_reviews_session)]
+
+def get_reviews_engine():
+    return engine_reviews
 
 
 
@@ -130,6 +141,14 @@ async def setup_database(engine_instance=engine):
 
 @app.post("/setup_users_db")
 async def setup_database(engine_instance=engine_users):
+    async with engine_instance.begin() as connection:
+        await connection.run_sync(Base.metadata.drop_all)
+        await connection.run_sync(Base.metadata.create_all)
+
+    return {"message": "success"}
+
+@app.post("/setup_reviews_db")
+async def setup_reviews_database(engine_instance=Depends(get_reviews_engine)):
     async with engine_instance.begin() as connection:
         await connection.run_sync(Base.metadata.drop_all)
         await connection.run_sync(Base.metadata.create_all)

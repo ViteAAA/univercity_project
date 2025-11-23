@@ -5,8 +5,8 @@ import uvicorn
 
 from db_base import Base
 from sqlalchemy.ext.asyncio import AsyncSession
-from database import setup_database, engine, engine_users, populate_films_db, SessionDep, app
-from routers import films, users # Импортируем объект роутера из файла routers/films.py
+from database import setup_database, setup_reviews_database, engine, engine_users, engine_reviews, populate_films_db, SessionDep, app
+from routers import films, users, reviews # Импортируем объект роутера из файла routers/films.py
 
 
 # Создаем экземпляр приложения FastAPI
@@ -16,6 +16,7 @@ from routers import films, users # Импортируем объект роут�
 # Все эндпоинты в том файле будут доступны по адресу /books
 app.include_router(films.router)
 app.include_router(users.router)
+app.include_router(reviews.router)
 
 # @app.on_event("startup")
 # async def startup_event():
@@ -43,6 +44,15 @@ async def setup_users_database_endpoint():
     # await setup_database(engine) # Закомментировано по умолчанию, чтобы избежать случайной потери данных
     # Вместо этого можно просто создать их, если их нет:
     async with engine_users.begin() as connection:
+        await connection.run_sync(Base.metadata.create_all)
+    return {"message": "Database setup requested/verified"}
+
+@app.post("/setup_reviews_db_manual", summary="Manually setup/recreate database tables")
+async def setup_reviews_database_endpoint():
+    # Эта функция удалит и создаст таблицы заново. Будьте осторожны с данными!
+    # await setup_reviews_database(engine) # Закомментировано по умолчанию, чтобы избежать случайной потери данных
+    # Вместо этого можно просто создать их, если их нет:
+    async with engine_reviews.begin() as connection:
         await connection.run_sync(Base.metadata.create_all)
     return {"message": "Database setup requested/verified"}
 
