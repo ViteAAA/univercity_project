@@ -1,6 +1,6 @@
 export default function feesCard(title, id, price, text, img) {
     return `
-        <a href="#" class="fees-card">
+        <a href="pages/film_page.html" class="fees-card">
             <img src="${img}" alt="pause">
             <div class="fees-content">
                 <p class="fees-card-title">

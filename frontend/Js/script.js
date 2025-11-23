@@ -1,4 +1,4 @@
-import { dataTabsTop, dataTabsBot, dataTabsFirst, dataTabsSecond, dataTabsThird, thirdDataTabsTop, thirdDataTabsBot, cardContent, popularFirstDataTabsBot, popularSecondDataTabsBot, popularThirdDataTabsBot, feesContent } from "./data.js";
+import { dataTabsFirst, dataTabsSecond, dataTabsThird, dataTabsFourth, dataTabsFifth, dataTabsSixth, dataTabsSeventh, cardContent, popularFirstDataTabsBot, popularSecondDataTabsBot, feesContent } from "./data.js";
 import card from "./card.js";
 import fees from './fees.js';
 
@@ -171,6 +171,10 @@ document.addEventListener('DOMContentLoaded', function() {
     renderMovies('first-tabs', dataTabsFirst);
     renderMovies('second-tabs', dataTabsSecond);
     renderMovies('third-tabs', dataTabsThird);
+    renderMovies('fourth-tabs', dataTabsFourth);
+    renderMovies('fifth-tabs', dataTabsFifth);
+    renderMovies('sixth-tabs', dataTabsSixth);
+    renderMovies('seventh-tabs', dataTabsSeventh);
     renderMovies('pop-item-1', popularFirstDataTabsBot);
     renderMovies('pop-item-2', popularSecondDataTabsBot);
 });

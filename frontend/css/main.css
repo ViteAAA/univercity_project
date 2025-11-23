@@ -408,9 +408,14 @@ main {
     display: grid;
     grid-template-columns: 1fr;
   }
+  main {
+    width: 100%; 
+  }
   .preview-tabs-content {
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
   }
 }
 

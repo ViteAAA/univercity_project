@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" media="(prefers-color-scheme: dark)" href="../images/svg/favicon.svg">
-    <link rel="icon" media="(prefers-color-scheme: light)" href="../images/svg/favicon-dark.svg">
-    <link rel="stylesheet" href="../css/font/stylesheet.css">
-    <link rel="stylesheet" href="../css/media.css">
-    <title>Media</title>
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="images/svg/favicon.svg">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="images/svg/favicon-dark.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/404.css">
+    <title>Cinema</title>
 </head>
 <body>
     <div class="sidebar transition" id="sidebar">
-        <div class="sidebar-close" id="sidebar-close"><img src="../images/svg/close.svg" alt="close"></div>
+        <div class="sidebar-close" id="sidebar-close"><img src="images/svg/close.svg" alt="close"></div>
         <div class="sidebar-content">
-            <a href="#" class="logo-href">
-                <img src="../images/svg/logo.svg" alt="logo" class="logo-href-image">
+            <a href="index.html" class="logo-href">
+                <img src="images/svg/logo.svg" alt="logo" class="logo-href-image">
             </a>
             <div  id="sidebar-content"></div>
         </div>
@@ -23,13 +25,13 @@
         <div class="login-box">
             <div class="close-btn" id="login-close">X</div>
             <h1>Войти</h1>
-            <form id="loginForm">
+            <form method="post" id="loginForm">
                 <input name="nickName" type="text" placeholder="Логин, почта или телефон" required>
                 <input name="password" type="password" placeholder="Ваш пароль" required>
                 <button type="submit" class="login-btn">Войти</button>
             </form>
             <button class="register-btn">Зарегистрироваться</button>
-            <!-- <a href="#" class="forgot-password">Восстановить пароль</a> -->
+            <a href="#" class="forgot-password">Восстановить пароль</a>
             
         </div>
     </div>
@@ -46,11 +48,11 @@
                 <input name="number" type="text" placeholder="Номер телефона или e-mail" required>
                 
                 <div class="checkbox-container">
-                    <input type="checkbox" id="policy" checked>
+                    <input type="checkbox" id="policy" checked required>
                     <label for="policy">Соглашаюсь на условия политики конфиденциальности</label>
                 </div>
                 <div class="checkbox-container">
-                    <input type="checkbox" id="data" checked>
+                    <input type="checkbox" id="data" checked required>
                     <label for="data">Соглашаюсь на обработку персональных данных</label>
                 </div>
 
@@ -58,51 +60,52 @@
             </form>
         </div>
     </div>
+    <!-- <img src="images/png/background.png" alt="background" class="background"> -->
     <header>
         <div class="container">
             <div class="header-adapt-cont">
-                <img src="../images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
-                <!-- <img src="../images/svg/search.svg" alt="search" class="header-search header-search-adapt"> -->
+                <img src="images/svg/burger-menu.svg" alt="burger-menu" class="header-burger-menu" id="header-burger-menu">
+                <!-- <img src="images/svg/search.svg" alt="search" class="header-search header-search-adapt"> -->
             </div>
             <div>
                 <div class="header-links">
-                    <a href="../index.html" class="logo-href">
-                        <img src="../images/svg/logo.svg" alt="logo" class="logo-href-image">
+                    <a href="index.html" class="logo-href">
+                        <img src="images/svg/logo.svg" alt="logo" class="logo-href-image">
                     </a>
                 </div>
                 <ul class="header-messeges">
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                            <img src="images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                            <img src="images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                            <img src="images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
                         </a>
                     </li>
                     <li>
                         <a href="#" class="header-messeges-mes">
-                            <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                            <img src="images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
                         </a>
                     </li>
                 </ul>
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="../index.html">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
-                    <li><a href="../building.html">Подборки</a></li>
-                    <li><a href="../building.html">Категории</a></li>
+                    <li><a href="#">Афиша</a></li>
+                    <li><a href="pages/media.html">Медиа</a></li>
+                    <li><a href="building.html">Подборки</a></li>
+                    <li><a href="building.html">Категории</a></li>
                 </ul>
             </nav>
             <div class="header-btns">
-                <!-- <img src="../images/svg/search.svg" alt="search" class="header-search"> -->
+                <!-- <img src="images/svg/search.svg" alt="search" class="header-search"> -->
                 <button class="header-login" id="login-open">
                     Войти
                 </button>
@@ -112,7 +115,7 @@
         <nav class="menu menu-adapt">
             <ul>
                 <li><a href="#">Афиша</a></li>
-                <li><a href="#">Медиа</a></li>
+                <li><a href="pages/media.html">Медиа</a></li>
                 <li><a href="#">Подборки</a></li>
                 <li><a href="#">Категории</a></li>
             </ul>
@@ -120,19 +123,23 @@
     </header>
 
     <main>
-        <div class="container">
-            <h1 class="tabs-header-title">
-                Медиа
-            </h1>
-            <div class="media" id="media-content">
-                
-            </div>
-        </div>
+        <h1>
+            404
+            <span>
+                Кина не будет:(
+            </span>
+        </h1>
+        <p>
+            Возможно, данного адреса страницы не сущетсвует, или странциа была перемещена.
+        </p>
+        <a href="index.html">
+            Вернуться на главную
+        </a>
     </main>
 
     <footer>
         <div class="footer-head">
-            <a href="#"><img src="../images/svg/footer-logo.svg" alt="logo"></a>
+            <a href="#"><img src="images/svg/footer-logo.svg" alt="logo"></a>
             <h1>
                 Подпишитесь на E-mail рассылку
             </h1>
@@ -156,29 +163,29 @@
             <ul class="header-messeges">
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="../images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
+                        <img src="images/svg/vk.svg" alt="vk" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="../images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
+                        <img src="images/svg/instagram.svg" alt="instagram" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="../images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
+                        <img src="images/svg/facebook.svg" alt="facebook" class="header-messeges-mes-image">
                     </a>
                 </li>
                 <li>
                     <a href="#" class="header-messeges-mes">
-                        <img src="../images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
+                        <img src="images/svg/twitter.svg" alt="twitter" class="header-messeges-mes-image">
                     </a>
                 </li>
             </ul>
             <nav class="menu">
                 <ul>
                     <li><a href="#">Афиша</a></li>
-                    <li><a href="#">Медиа</a></li>
+                    <li><a href="pages/media.html">Медиа</a></li>
                     <li><a href="#">Подборки</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>
@@ -191,9 +198,8 @@
             </a>
         </div>
     </footer>
-
-    <script type="module" src="../Js/render-media.js"></script>
-    <script type="module" src="../Js/script.js"></script>
-    <script src="../Js/render-menu.js"></script>
+    <script src="Js/render-menu.js"></script>
+    <script type="module" src="Js/script.js"></script>
+    <script src="Js/swiper-slider.js"></script>
 </body>
 </html>

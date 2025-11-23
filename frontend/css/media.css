@@ -2,17 +2,17 @@
 
 main {
   padding-top: 51px;
-  height: 100vh;
+  height: fit-content;
 }
 
 .media {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    row-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  row-gap: 30px;
 
-    margin-top: 30px;
-    padding-bottom: 100px;
+  margin-top: 30px;
+  padding-bottom: 100px;
 }
 
 .media-item {
